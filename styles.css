@@ -514,25 +514,26 @@ main > .tick + section,
   .btn{padding:.95rem 1.5rem;font-size:.72rem;letter-spacing:.11em}
   .orn{inset:8px}
 
-  /* hero: photo fills the screen, copy sits in the lower half */
-  .hero{min-height:100svh;padding-top:104px;padding-bottom:34px;align-items:flex-start}
-  .hero__bg img{object-position:30% 50%}
-  .hero::after{background:linear-gradient(180deg,
-      rgba(4,10,7,.86) 0%,rgba(4,10,7,.78) 36%,rgba(4,10,7,.58) 54%,
-      rgba(4,10,7,.24) 70%,rgba(4,10,7,.04) 84%,rgba(4,10,7,0) 100%)}
+  /* hero: the whole photo sits uncropped along the bottom, copy above it */
+  .hero{min-height:100svh;align-items:flex-start;background:var(--deeper);
+    padding-top:98px;padding-bottom:calc(56.3% + 20px)}
+  .hero__bg{top:auto;bottom:0;height:auto}
+  .hero__bg img{width:100%;height:auto;object-fit:contain}
+  .hero::after{inset:auto 0 calc(56.3% - 6px) 0;height:80px;
+    background:linear-gradient(180deg,var(--deeper) 0%,rgba(4,10,7,.55) 45%,rgba(4,10,7,0) 100%)}
   .hero__in{align-items:flex-start}
-  .hero h1{font-size:2.2rem;margin-bottom:.85rem}
-  .hero .eyebrow{margin-bottom:.75rem}
-  .hero .lede{font-size:.94rem;line-height:1.55;margin-bottom:.6rem}
+  .hero h1{font-size:1.95rem;margin-bottom:.7rem}
+  .hero .eyebrow{margin-bottom:.6rem;font-size:.56rem;letter-spacing:.18em}
+  .hero .lede{font-size:.88rem;line-height:1.52;margin-bottom:.5rem}
   /* meta above the buttons so it stays on the dark half of the photo */
   .hero__copy{display:flex;flex-direction:column}
   .hero__copy .eyebrow{order:1}
   .hero__copy h1{order:2}
   .hero__copy .lede{order:3}
-  .hero__meta{order:4;margin-top:14px;padding-top:.8rem;font-size:.6rem;gap:.35rem 1rem;
-    text-shadow:0 2px 12px rgba(0,0,0,.75)}
-  .hero__cta{order:5;margin-top:16px;gap:9px}
-  .hero__cta .btn{flex:1 1 100%;justify-content:center;padding:.88rem 1.3rem}
+  .hero__meta{order:4;margin-top:12px;padding-top:.65rem;font-size:.55rem;gap:.3rem .9rem;letter-spacing:.1em}
+  .hero__cta{order:5;margin-top:14px;gap:8px;flex-wrap:nowrap}
+  .hero__cta .btn{flex:1 1 0;min-width:0;justify-content:center;padding:.78rem .7rem;font-size:.62rem;letter-spacing:.07em}
+  .hero__cta .btn svg{width:13px;height:13px}
   .cue{display:none}
 
   /* ticker */

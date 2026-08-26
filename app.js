@@ -36,6 +36,12 @@
     });
   });
 
+  /* on small screens start every question closed so the page reads shorter */
+  if (window.matchMedia && window.matchMedia('(max-width: 700px)').matches) {
+    var openQ = document.querySelector('.q[open]');
+    if (openQ) openQ.removeAttribute('open');
+  }
+
   /* anchor offset for the fixed header */
   document.querySelectorAll('a[href^="#"]').forEach(function (a) {
     a.addEventListener('click', function (e) {

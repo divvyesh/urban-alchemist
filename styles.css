@@ -152,6 +152,7 @@ main > .tick + section,
   display:flex;justify-content:flex-end}
 .hero__copy{max-width:min(56%,660px);color:rgba(246,241,228,.92)}
 .hero .eyebrow{color:var(--ember);letter-spacing:.2em;white-space:nowrap}
+@media(max-width:1080px){.hero .eyebrow{white-space:normal;flex-wrap:wrap}}
 .hero .eyebrow::before{background:var(--ember)}
 .hero h1{margin:0 0 1.5rem;max-width:14ch;color:#FFFCF4;text-shadow:0 4px 28px rgba(0,0,0,.5);line-height:1.04;
   font-size:clamp(2.5rem,5.1vw,4.3rem)}
@@ -449,4 +450,123 @@ main > .tick + section,
   .js-rv .rv{opacity:1;transform:none}
   .hero h1 .l>span{transform:none}
   #gl{display:none}
+}
+
+
+/* ==========================================================
+   MOBILE PASS: smaller type, tighter rhythm, bigger imagery
+   ========================================================== */
+@media(max-width:700px){
+  body{font-size:15px;line-height:1.62}
+  section{padding:clamp(48px,11vw,64px) var(--pad)}
+  .d1{font-size:2.3rem;line-height:1.02}
+  .d2{font-size:1.9rem;line-height:1.06}
+  .d3{font-size:1.45rem}
+  .d4{font-size:1.2rem}
+  .lede{font-size:1rem;line-height:1.6}
+  .eyebrow{font-size:.62rem;letter-spacing:.22em;margin-bottom:1rem}
+  .btn{padding:.95rem 1.5rem;font-size:.72rem;letter-spacing:.11em}
+  .orn{inset:8px}
+
+  /* hero */
+  .hero{padding-top:132px;padding-bottom:64px;min-height:0}
+  .hero h1{font-size:2.35rem;margin-bottom:1.1rem}
+  .hero .lede{font-size:.98rem;margin-bottom:.7rem}
+  .hero__cta{margin-top:22px;gap:10px}
+  .hero__cta .btn{flex:1 1 100%;justify-content:center}
+  .hero__meta{margin-top:26px;padding-top:1rem;font-size:.63rem;gap:.5rem 1.1rem}
+  .cue{display:none}
+
+  /* ticker */
+  .tick{padding:11px 0}
+  .tick__t{font-size:.68rem;letter-spacing:.2em}
+
+  /* store */
+  .store__copy{padding-top:clamp(34px,7vw,48px);padding-bottom:1.1rem}
+  .store__copy h2{font-size:1.75rem}
+  .store__foot{padding-top:1.2rem;padding-bottom:clamp(34px,7vw,48px)}
+  .store__addr{font-size:.66rem;letter-spacing:.14em}
+  .store__cta{gap:10px}
+  .store__cta .btn{flex:1 1 100%;justify-content:center}
+
+  /* intro */
+  .intro__in{gap:26px}
+  .intro__hood{font-size:.94rem;margin-top:14px}
+  .intro .hero__cta .btn{flex:1 1 100%;justify-content:center}
+
+  /* visit CTA band */
+  .pull__pts{gap:9px;margin-top:24px}
+  .pull__pts li{padding:.8rem .95rem;border-radius:3px}
+  .pull__pts b{font-size:.96rem}
+  .pull__pts span{font-size:.86rem}
+  .pull__cta{margin-top:24px}
+  .pull__cta .btn{flex:1 1 100%;justify-content:center}
+  .pull__fine{font-size:.62rem;margin-top:1rem}
+
+  /* the six shelves: two up, compact */
+  .feel__head{margin-bottom:30px}
+  .grid6{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .card{padding:16px 12px 18px;border-radius:14px}
+  .card__fig{height:104px}
+  .card__fig img{height:96px;max-width:88%}
+  .card__fig::before{width:104px}
+  .card__n{font-size:.6rem;letter-spacing:.18em;margin:.3rem 0 .35rem}
+  .card h3{font-size:1.28rem;margin-bottom:.7rem}
+  .card__more{padding:.55rem .8rem;font-size:.6rem;letter-spacing:.1em;gap:.35rem}
+  .card__more svg{width:11px;height:11px}
+  .card__panel{margin-top:1rem;padding-top:1rem}
+  .card__sub{font-size:1.02rem;margin-bottom:.7rem}
+  .row__cats{gap:6px;margin-bottom:.9rem}
+  .row__cats li{padding:.34rem .68rem;font-size:.72rem;border-width:1px}
+  .row__how{font-size:.92rem;margin-bottom:.9rem}
+  .says{gap:.5rem}
+  .says__ico{width:24px;height:24px}
+  .says__ico svg{width:13px;height:13px}
+  .says p{padding:.6rem .8rem;font-size:.92rem;border-width:1px}
+
+  /* jar wall */
+  .split{gap:26px}
+  .jar{aspect-ratio:1/1}
+  .jar__l{padding:1.2rem}
+  .jar__n{font-size:.62rem;margin-bottom:1rem}
+  .jar__steps{gap:.6rem;margin-bottom:1.2rem}
+  .jar__steps span{font-size:1rem}
+  .jar__cta{padding:.6rem 1rem;font-size:.62rem}
+
+  /* snack passport */
+  .pmarq__g .pf{font-size:1.35rem;gap:.5rem}
+  .pmarq__g{gap:1.7rem;padding-right:1.7rem}
+
+  /* faq */
+  .faq__side{margin-bottom:22px}
+  .q summary{font-size:1rem;padding:.85rem 0}
+  .q__a p{font-size:.93rem}
+
+  /* the five doors */
+  .doors{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+  .door{padding:.9rem .95rem}
+  .door h3{font-size:1.08rem}
+  .door p{font-size:.85rem}
+
+  /* visit */
+  .addr{font-size:1.5rem}
+  .rows div{padding:.7rem 0}
+  .rows b{font-size:.62rem}
+  .rows span{font-size:.92rem}
+  .visit .hero__cta .btn{flex:1 1 100%;justify-content:center}
+  .qr__c{max-width:190px;margin-inline:auto}
+
+  /* footer */
+  .ft{padding-top:44px;padding-bottom:32px}
+  .ft__top{gap:26px;margin-bottom:1.8rem;padding-bottom:1.6rem}
+  .ft__top img{width:130px}
+  .ft h3{font-size:.78rem}
+  .ft ul li,.ft__top p{font-size:.88rem}
+  .legal{font-size:.72rem;line-height:1.6}
+  .legal p{margin-bottom:.7rem}
+  .ft__b{font-size:.68rem}
+}
+@media(max-width:380px){
+  .grid6{grid-template-columns:1fr}
+  .doors{grid-template-columns:1fr}
 }

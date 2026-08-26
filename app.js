@@ -5,6 +5,8 @@
   'use strict';
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  document.documentElement.classList.add('js-on');
+
   var hdr = document.getElementById('hdr');
   var onScroll = function () { hdr.classList.toggle('stuck', window.scrollY > 40); };
   window.addEventListener('scroll', onScroll, { passive: true });
@@ -22,51 +24,17 @@
     rvs.forEach(function (el) { rio.observe(el); });
   }
 
-  /* the four keys */
-  var tabs = Array.prototype.slice.call(document.querySelectorAll('.ktab'));
-  var bodies = Array.prototype.slice.call(document.querySelectorAll('.kbody'));
-  var specs = Array.prototype.slice.call(document.querySelectorAll('.spec'));
-  function selectKey(i) {
-    tabs.forEach(function (t, n) {
-      t.setAttribute('aria-selected', n === i ? 'true' : 'false');
-      t.setAttribute('tabindex', n === i ? '0' : '-1');
-    });
-    bodies.forEach(function (b, n) {
-      b.classList.toggle('on', n === i);
-      if (n === i) b.removeAttribute('hidden'); else b.setAttribute('hidden', '');
-    });
-    specs.forEach(function (s, n) { s.classList.toggle('on', n === i); });
-  }
-  tabs.forEach(function (t, i) {
-    t.addEventListener('click', function () { selectKey(i); });
-    t.addEventListener('keydown', function (e) {
-      var n = null;
-      if (e.key === 'ArrowDown' || e.key === 'ArrowRight') n = (i + 1) % tabs.length;
-      if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') n = (i - 1 + tabs.length) % tabs.length;
-      if (n !== null) { e.preventDefault(); selectKey(n); tabs[n].focus(); }
+  /* shelf cards — disclosure, collapsed only when JS is on */
+  Array.prototype.slice.call(document.querySelectorAll('.card__more')).forEach(function (b) {
+    var panel = document.getElementById(b.getAttribute('aria-controls'));
+    if (!panel) return;
+    var label = b.querySelector('.card__more-t');
+    b.addEventListener('click', function () {
+      var open = panel.classList.toggle('open');
+      b.setAttribute('aria-expanded', open ? 'true' : 'false');
+      if (label) label.textContent = open ? 'Close' : 'See this shelf';
     });
   });
-  var keysSection = document.getElementById('keys');
-  if (!reduce && tabs.length && keysSection) {
-    var idx = 0, visible = false, timer = null;
-    function stopAuto() {
-      if (timer) { clearInterval(timer); timer = null; }
-      ['pointerenter', 'focusin', 'click', 'keydown'].forEach(function (ev) {
-        keysSection.removeEventListener(ev, stopAuto);
-      });
-    }
-    ['pointerenter', 'focusin', 'click', 'keydown'].forEach(function (ev) {
-      keysSection.addEventListener(ev, stopAuto);
-    });
-    if ('IntersectionObserver' in window) {
-      new IntersectionObserver(function (e) { visible = e[0].isIntersecting; }, { threshold: 0.4 }).observe(keysSection);
-    }
-    timer = setInterval(function () {
-      if (!visible || document.hidden) return;
-      idx = (idx + 1) % tabs.length;
-      selectKey(idx);
-    }, 5200);
-  }
 
   /* anchor offset for the fixed header */
   document.querySelectorAll('a[href^="#"]').forEach(function (a) {

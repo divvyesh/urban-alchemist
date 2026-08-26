@@ -514,13 +514,25 @@ main > .tick + section,
   .btn{padding:.95rem 1.5rem;font-size:.72rem;letter-spacing:.11em}
   .orn{inset:8px}
 
-  /* hero */
-  .hero{padding-top:132px;padding-bottom:64px;min-height:0}
-  .hero h1{font-size:2.35rem;margin-bottom:1.1rem}
-  .hero .lede{font-size:.98rem;margin-bottom:.7rem}
-  .hero__cta{margin-top:22px;gap:10px}
-  .hero__cta .btn{flex:1 1 100%;justify-content:center}
-  .hero__meta{margin-top:26px;padding-top:1rem;font-size:.63rem;gap:.5rem 1.1rem}
+  /* hero: photo fills the screen, copy sits in the lower half */
+  .hero{min-height:100svh;padding-top:104px;padding-bottom:34px;align-items:flex-start}
+  .hero__bg img{object-position:30% 50%}
+  .hero::after{background:linear-gradient(180deg,
+      rgba(4,10,7,.86) 0%,rgba(4,10,7,.78) 36%,rgba(4,10,7,.58) 54%,
+      rgba(4,10,7,.24) 70%,rgba(4,10,7,.04) 84%,rgba(4,10,7,0) 100%)}
+  .hero__in{align-items:flex-start}
+  .hero h1{font-size:2.2rem;margin-bottom:.85rem}
+  .hero .eyebrow{margin-bottom:.75rem}
+  .hero .lede{font-size:.94rem;line-height:1.55;margin-bottom:.6rem}
+  /* meta above the buttons so it stays on the dark half of the photo */
+  .hero__copy{display:flex;flex-direction:column}
+  .hero__copy .eyebrow{order:1}
+  .hero__copy h1{order:2}
+  .hero__copy .lede{order:3}
+  .hero__meta{order:4;margin-top:14px;padding-top:.8rem;font-size:.6rem;gap:.35rem 1rem;
+    text-shadow:0 2px 12px rgba(0,0,0,.75)}
+  .hero__cta{order:5;margin-top:16px;gap:9px}
+  .hero__cta .btn{flex:1 1 100%;justify-content:center;padding:.88rem 1.3rem}
   .cue{display:none}
 
   /* ticker */

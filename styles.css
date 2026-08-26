@@ -55,7 +55,7 @@ section{position:relative;padding:clamp(78px,10vw,150px) var(--pad)}
 }
 .orn{position:absolute;inset:clamp(11px,1.5vw,24px);z-index:0;pointer-events:none;
   border:1px solid var(--orn-line);border-radius:3px}
-.orn::before,.orn::after{content:"";position:absolute;width:clamp(150px,19vw,320px);aspect-ratio:1;
+.orn::before,.orn::after{content:"";position:absolute;z-index:1;width:clamp(150px,19vw,320px);aspect-ratio:1;
   background:var(--orn,var(--orn-green)) center/contain no-repeat;opacity:.42}
 .orn::before{top:-14px;left:0}
 .orn::after{bottom:-14px;right:0;transform:rotate(180deg)}
@@ -71,6 +71,52 @@ section{position:relative;padding:clamp(78px,10vw,150px) var(--pad)}
 main > section + section,
 main > .tick + section,
 .ft{border-top:2px solid rgba(183,136,58,.34)}
+
+
+/* ---------- drifting gold motes ---------- */
+.motes{position:absolute;inset:0;pointer-events:none;overflow:hidden;
+  --mote:rgba(235,165,68,.95);--mote2:rgba(235,165,68,.4)}
+.on-light .motes,.ft .motes{--mote:rgba(160,116,40,.72);--mote2:rgba(160,116,40,.24);opacity:.55}
+.on-dark .motes,.store .motes{--mote:rgba(240,196,120,1);--mote2:rgba(240,196,120,.45)}
+.motes::before,.motes::after{content:"";position:absolute;inset:-40px;
+  background-repeat:repeat;will-change:transform,opacity}
+.motes::before{
+  background-image:
+    radial-gradient(circle at 22% 34%,var(--mote) 0 1.4px,var(--mote2) 2.4px,transparent 5.5px),
+    radial-gradient(circle at 71% 12%,var(--mote) 0 1.1px,var(--mote2) 2px,transparent 4.4px);
+  background-size:353px 311px,281px 409px;
+  animation:moteA 52s linear infinite,moteGlow 7s ease-in-out infinite}
+.motes::after{
+  background-image:
+    radial-gradient(circle at 63% 57%,var(--mote) 0 1.2px,var(--mote2) 2.1px,transparent 4.8px),
+    radial-gradient(circle at 15% 83%,var(--mote) 0 1px,var(--mote2) 1.8px,transparent 4px);
+  background-size:311px 443px,547px 331px;opacity:.62;
+  animation:moteB 71s linear infinite,moteGlow 9.5s ease-in-out infinite reverse}
+@keyframes moteA{to{transform:translate3d(-353px,-311px,0)}}
+@keyframes moteB{to{transform:translate3d(311px,-443px,0)}}
+@keyframes moteGlow{0%,100%{opacity:.26}50%{opacity:.72}}
+.motes--free{inset:0}
+.store .motes--free{z-index:1}
+.ft .motes--free{opacity:.6}
+@media(max-width:700px){.motes::before{background-size:250px 220px,200px 290px}.motes::after{background-size:230px 320px,380px 240px}}
+
+/* ---------- buttons: living sheen ---------- */
+.btn::after{content:"";position:absolute;top:-30%;bottom:-30%;left:-60%;width:42%;z-index:0;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.3),transparent);
+  transform:skewX(-18deg);animation:sheen 5.2s cubic-bezier(.5,0,.3,1) infinite;pointer-events:none}
+.btn--line::after,.btn--brassline::after{background:linear-gradient(100deg,transparent,rgba(183,136,58,.28),transparent)}
+@keyframes sheen{0%{left:-60%}55%,100%{left:130%}}
+.btn--brass{animation:brassPulse 4.2s ease-in-out infinite}
+@keyframes brassPulse{
+  0%,100%{box-shadow:0 12px 30px -14px rgba(199,122,30,.9),0 0 0 0 rgba(235,165,68,0)}
+  50%{box-shadow:0 14px 34px -14px rgba(199,122,30,.95),0 0 26px 2px rgba(235,165,68,.35)}}
+.btn--brass:hover{animation:none}
+
+@media(prefers-reduced-motion:reduce){
+  .motes{display:none}
+  .btn::after{display:none}
+  .btn--brass{animation:none}
+}
 
 /* ---------- reveal ---------- */
 .rv{transition:opacity .9s var(--ease),transform 1s var(--ease)}

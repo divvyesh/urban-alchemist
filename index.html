@@ -48,31 +48,35 @@
 <main id="top">
 
 <section class="hero" aria-labelledby="h1">
+  <picture class="hero__bg">
+    <source media="(max-width:700px)" srcset="assets/hero-field-sm.webp">
+    <img src="assets/hero-field.webp" width="2000" height="1125" alt="" aria-hidden="true" fetchpriority="high">
+  </picture>
   <canvas id="gl" aria-hidden="true"></canvas>
   <div class="hero__in">
     <div class="hero__copy">
-      <p class="eyebrow">Est. 2026 &middot; 2219 N Clybourn Ave</p>
+      <p class="eyebrow">A place to slow down &middot; Lincoln Park, Chicago</p>
       <h1 class="d1" id="h1">
-        <span class="l"><span>You don't</span></span>
-        <span class="l"><span>have to know</span></span>
-        <span class="l"><span>what it's <i>called.</i></span></span>
+        <span class="l"><span>The grind will</span></span>
+        <span class="l"><span>still be there</span></span>
+        <span class="l"><span><i>tomorrow.</i></span></span>
       </h1>
-      <p class="lede">You only have to know <strong>how you want to feel.</strong> We take it from there. An apothecary of functional mushrooms, nootropics, botanicals and rare exotic snacks, two doors up from the pizza line on Clybourn.</p>
+      <p class="lede">Chicago is not built for slowing down. Between the commute, the inbox, the group chat and whatever the day decided to throw at you, most evenings end without a single quiet minute in them.</p>
+      <p class="lede">We built a shop for those ten minutes. Walk in, tell us how you want to feel, and walk out with something that helps you breathe out, sleep properly, and come back at it stronger.</p>
       <div class="hero__cta">
-        <a class="btn btn--fill" href="https://maps.google.com/?q=Urban+Alchemist,2219+N+Clybourn+Ave,Chicago,IL+60614" target="_blank" rel="noopener">
-          <span>Walk in tonight<span class="btn__x"> &middot; Open in Maps</span></span>
+        <a class="btn btn--brass" href="https://maps.google.com/?q=Urban+Alchemist,2219+N+Clybourn+Ave,Chicago,IL+60614" target="_blank" rel="noopener">
+          <span>Take ten minutes tonight</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-6.4 7-11a7 7 0 1 0-14 0c0 4.6 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
         </a>
-        <a class="btn btn--brassline" href="tel:+17738655181">
+        <a class="btn btn--light" href="tel:+17738655181">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1Z"/></svg>
           <span>(773) 865-5181</span>
         </a>
       </div>
       <div class="hero__meta">
         <span><b>Open 7 days</b></span>
-        <span>Locals and visitors welcome</span>
+        <span>2219 N Clybourn Ave</span>
         <span><b>21+</b> &middot; ID required</span>
-        <span>Not a dispensary</span>
       </div>
     </div>
   </div>
@@ -93,7 +97,7 @@
     <img src="assets/storefront.webp" width="1086" height="1448" alt="Urban Alchemist at 2219 N Clybourn Avenue at dusk, a warmly lit shop on the ground floor of a Lincoln Park building, with the Chicago skyline behind it" loading="lazy">
     <div class="store__copy">
       <p class="eyebrow">Lincoln Park · Chicago</p>
-      <h2 id="storeh">The warm one<br>on Clybourn.</h2>
+      <h2 id="storeh">The lights are on.<br>The door is unlocked.</h2>
       <p>Look for the light. We're two doors up from the pizza line, and the door is open seven days to whoever walks through it.</p>
       <p class="store__addr">2219 N Clybourn Ave · 21+</p>
       <div class="store__cta">
@@ -102,6 +106,43 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
         </a>
         <a class="btn btn--light" href="tel:+17738655181"><span>Call the shop</span></a>
+      </div>
+
+      <div class="store__hood">
+        <p>Everybody on this block is carrying something. The seven o'clock dog walkers. The nurses coming off shift. The servers closing out down the street. The parents who finally got the kids down and want twenty minutes that belong to them. We are the warm window in the middle of it, and we stay open late enough to catch you on the way home.</p>
+        <ul>
+          <li><b>Open late enough</b><span>For whatever your day turned into</span></li>
+          <li><b>No membership, no speech</b><span>Walk in, look around, leave. All fine.</span></li>
+          <li><b>You already walk past us</b><span>Two doors up from the pizza line</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="intro" aria-labelledby="introh">
+  <div class="intro__in">
+    <div class="intro__l rv">
+      <p class="eyebrow">Est. 2026 &middot; 2219 N Clybourn Ave</p>
+      <h2 class="d2" id="introh">You don't have to know<br>what it's <i>called.</i></h2>
+    </div>
+    <div class="intro__r rv" data-d="1">
+      <p class="lede">You only have to know <strong>how you want to feel.</strong> We take it from there. An apothecary of functional mushrooms, nootropics, botanicals and rare exotic snacks, two doors up from the pizza line on Clybourn.</p>
+      <div class="hero__cta">
+        <a class="btn btn--fill" href="https://maps.google.com/?q=Urban+Alchemist,2219+N+Clybourn+Ave,Chicago,IL+60614" target="_blank" rel="noopener">
+          <span>Walk in tonight<span class="btn__x"> &middot; Open in Maps</span></span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-6.4 7-11a7 7 0 1 0-14 0c0 4.6 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+        </a>
+        <a class="btn btn--brassline" href="tel:+17738655181">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1Z"/></svg>
+          <span>(773) 865-5181</span>
+        </a>
+      </div>
+      <div class="hero__meta">
+        <span><b>Open 7 days</b></span>
+        <span>Locals and visitors welcome</span>
+        <span><b>21+</b> &middot; ID required</span>
+        <span>Not a dispensary</span>
       </div>
     </div>
   </div>

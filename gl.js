@@ -220,13 +220,13 @@
     gl.useProgram(pLine);
     gl.uniformMatrix4fv(L.lProj, false, new Float32Array(proj));
     gl.uniformMatrix4fv(L.lView, false, new Float32Array(view));
-    gl.uniform1f(L.lAlpha, 0.95);
+    gl.uniform1f(L.lAlpha, 0.85);
     gl.bindBuffer(gl.ARRAY_BUFFER, bLV);
     gl.enableVertexAttribArray(L.lPos); gl.vertexAttribPointer(L.lPos, 3, gl.FLOAT, false, 0, 0);
     gl.bindBuffer(gl.ARRAY_BUFFER, bLF);
     gl.enableVertexAttribArray(L.lFade); gl.vertexAttribPointer(L.lFade, 1, gl.FLOAT, false, 0, 0);
 
-    var ox = (W / Math.max(1, H) > 1.15) ? 2.35 : 0.0;
+    var ox = (W / Math.max(1, H) > 1.15) ? -2.6 : 0.0;
     var base = mul(translate(ox, 0.35, -2.2), rotX(-0.28 + my * 0.22));
     for (var g = 0; g < groups.length; g++) {
       var spin = t * (0.11 + g * 0.045) + g * 0.6;

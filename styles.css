@@ -3,6 +3,7 @@
    Bold apothecary. Warm ground, brass, heavy serif.
    ========================================================== */
 :root{
+  --hdr-h:92px;
   --ivory:#F6F1E4; --paper:#FFFDF7; --parch:#EDE4D1;
   --ink:#101711; --ink-2:#2C352C; --mute:#525A4E;
   --forest:#173D2B; --deep:#0A1911; --deeper:#06110B;
@@ -177,11 +178,13 @@ main > .tick + section,
 .hdr .btn{padding:1rem 1.6rem;font-size:.73rem}
 @media(max-width:1240px){.hdr__place{display:none}.hdr__nav{gap:1.4rem}.hdr__nav a{font-size:.68rem}}
 @media(max-width:1080px){
-  .hdr{flex-wrap:wrap;row-gap:8px}
-  .hdr__nav{order:3;width:100%;gap:1.3rem;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+  .hdr{flex-wrap:wrap;row-gap:6px;padding:9px var(--pad)}
+  .hdr__nav{order:3;width:100%;gap:1.15rem;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
   .hdr__nav::-webkit-scrollbar{display:none}
-  .hdr__nav a{font-size:.67rem;flex:none}
-  .hdr__logo img{height:44px}
+  .hdr__nav a{font-size:.63rem;letter-spacing:.12em;flex:none;padding:2px 0}
+  .hdr__logo img{height:38px}
+  .hdr.stuck .hdr__logo img{height:34px}
+  .hdr .btn{padding:.72rem 1rem;font-size:.66rem}
 }
 @media(max-width:560px){.hdr .btn span{display:none}.hdr .btn{padding:.9rem}}
 @media(max-width:700px){.btn__x{display:none}}
@@ -514,14 +517,15 @@ main > .tick + section,
   .btn{padding:.95rem 1.5rem;font-size:.72rem;letter-spacing:.11em}
   .orn{inset:8px}
 
-  /* hero: the whole photo sits uncropped along the bottom, copy above it */
-  .hero{min-height:100svh;align-items:flex-start;background:var(--deeper);
-    padding-top:98px;padding-bottom:calc(56.3% + 20px)}
-  .hero__bg{top:auto;bottom:0;height:auto}
-  .hero__bg img{width:100%;height:auto;object-fit:contain}
-  .hero::after{inset:auto 0 calc(56.3% - 6px) 0;height:80px;
-    background:linear-gradient(180deg,var(--deeper) 0%,rgba(4,10,7,.55) 45%,rgba(4,10,7,0) 100%)}
-  .hero__in{align-items:flex-start}
+  /* hero: the whole photo on top, copy underneath */
+  .hero{display:block;min-height:0;background:var(--deeper);
+    padding:var(--hdr-h) 0 clamp(34px,7vw,46px)}
+  .hero__bg{position:static;display:block}
+  .hero__bg img{width:100%;height:auto;object-fit:fill}
+  .hero::after{content:none}
+  #gl{display:none}
+  .hero__in{display:block;padding:clamp(18px,4.6vw,26px) var(--pad) 0}
+  .hero__copy{max-width:100%}
   .hero h1{font-size:1.95rem;margin-bottom:.7rem}
   .hero .eyebrow{margin-bottom:.6rem;font-size:.56rem;letter-spacing:.18em}
   .hero .lede{font-size:.88rem;line-height:1.52;margin-bottom:.5rem}
@@ -612,8 +616,11 @@ main > .tick + section,
   .rows div{padding:.7rem 0}
   .rows b{font-size:.62rem}
   .rows span{font-size:.92rem}
-  .visit .hero__cta .btn{flex:1 1 100%;justify-content:center}
-  .qr__c{max-width:190px;margin-inline:auto}
+  .visit .hero__cta{flex-wrap:nowrap}
+  .visit .hero__cta .btn{flex:1 1 0;min-width:0;justify-content:center;padding:.8rem .7rem;font-size:.64rem}
+  .qr{display:none}
+  .rows div{padding:.62rem 0}
+  .addr{font-size:1.35rem}
 
   /* footer */
   .ft{padding-top:44px;padding-bottom:32px}

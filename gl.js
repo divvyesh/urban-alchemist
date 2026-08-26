@@ -5,6 +5,7 @@
    ============================================================ */
 (function () {
   'use strict';
+  if (window.innerWidth <= 700) return;   /* phones get no canvas: battery and clarity */
   var cvs = document.getElementById('gl');
   if (!cvs) return;
   if (!('IntersectionObserver' in window)) return;

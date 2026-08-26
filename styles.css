@@ -125,7 +125,7 @@ section{position:relative;padding:clamp(78px,10vw,150px) var(--pad)}
 .hero__in{position:relative;z-index:3;max-width:var(--maxw);margin:0 auto;width:100%;
   display:flex;justify-content:flex-end}
 .hero__copy{max-width:min(56%,660px);color:rgba(246,241,228,.92)}
-.hero .eyebrow{color:var(--ember)}
+.hero .eyebrow{color:var(--ember);letter-spacing:.2em;white-space:nowrap}
 .hero .eyebrow::before{background:var(--ember)}
 .hero h1{margin:0 0 1.5rem;max-width:14ch;color:#FFFCF4;text-shadow:0 4px 28px rgba(0,0,0,.5);
   font-size:clamp(2.5rem,5.1vw,4.3rem)}

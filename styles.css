@@ -489,6 +489,7 @@ main > .tick + section,
 .legal .fda{color:#fff;font-weight:600}
 .legal .not{color:rgba(246,241,228,.9)}
 .legal strong,.ft__top strong{color:#fff}
+.ft__local{max-width:var(--maxw);margin:0 auto 1.4rem;font-size:.74rem;line-height:1.65;color:rgba(246,241,228,.5)}
 .ft__b{max-width:var(--maxw);margin:2.4rem auto 0;padding-top:1.6rem;border-top:2px solid rgba(246,241,228,.14);
   display:flex;justify-content:space-between;gap:1.2rem;flex-wrap:wrap;font-size:.76rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(246,241,228,.62)}
 @media(max-width:840px){.ft__top{grid-template-columns:1fr}}

@@ -68,7 +68,7 @@
   g.setAttribute('aria-labelledby', 'ag-t');
   g.innerHTML =
     '<div class="gate__p">' +
-      '<img src="assets/logo-mark.webp" width="360" height="359" alt="">' +
+      '<img src="assets/urban-alchemist-logo-mark.webp" width="360" height="359" alt="">' +
       '<h2 class="d3" id="ag-t">Are you 21 or older?</h2>' +
       '<p>Urban Alchemist is an adults-only wellness boutique in Lincoln Park, Chicago.</p>' +
       '<div class="gate__b">' +
@@ -111,7 +111,7 @@
     var panel = g.querySelector('.gate__p');
     panel.setAttribute('tabindex', '-1');
     panel.innerHTML =
-      '<img src="assets/logo-mark.webp" width="360" height="359" alt="">' +
+      '<img src="assets/urban-alchemist-logo-mark.webp" width="360" height="359" alt="">' +
       '<h2 class="d3">Come back when you\'re 21.</h2>' +
       '<p>You must be 21 or older to enter this site. Thanks for stopping by.</p>';
     panel.focus();

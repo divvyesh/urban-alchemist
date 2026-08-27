@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://urban-alchemist-ten.vercel.app/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://urban-alchemist-ten.vercel.app/assets/urban-alchemist-store-interior-lincoln-park-chicago.webp</image:loc>
+      <image:title>Urban Alchemist, 2219 N Clybourn Ave, Lincoln Park, Chicago</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://urban-alchemist-ten.vercel.app/assets/urban-alchemist-slow-down-sunset-desk-chicago.webp</image:loc>
+      <image:title>Slow down for ten minutes: Urban Alchemist, Lincoln Park</image:title>
+    </image:image>
+  </url>
+</urlset>

@@ -125,3 +125,21 @@
     else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
   });
 })();
+
+/* Keep the source reviews readable without JS; only clone them for a seamless visual loop. */
+(function(){
+  var section=document.querySelector('.reviews');
+  if(!section)return;
+  var track=section.querySelector('.reviews-track');
+  var group=section.querySelector('.reviews-group');
+  var button=section.querySelector('.reviews-toggle');
+  var copy=group.cloneNode(true);
+  copy.setAttribute('aria-hidden','true');
+  copy.querySelectorAll('a').forEach(function(a){a.setAttribute('tabindex','-1');});
+  track.appendChild(copy);section.classList.add('reviews-ready');button.hidden=false;
+  button.addEventListener('click',function(){
+    var paused=section.classList.toggle('is-paused');
+    button.setAttribute('aria-pressed',String(paused));
+    button.textContent=paused?'Resume scrolling':'Pause scrolling';
+  });
+})();

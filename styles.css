@@ -637,3 +637,5 @@ main > .tick + section,
   .grid6{grid-template-columns:1fr}
   .doors{grid-template-columns:1fr}
 }
+
+.discovery-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:36px}.discovery-cards>a{display:block;padding:28px;border:1px solid var(--rule)}.discovery-cards h3{font-size:28px;line-height:1.2}.discovery-cards p{margin:18px 0;font-size:17px;line-height:1.6}.discovery-cards span{font-size:14px;text-decoration:underline;text-underline-offset:4px}.discovery-cards a:focus-visible{outline:3px solid var(--brass);outline-offset:4px}@media(max-width:760px){.discovery-cards{grid-template-columns:1fr}}

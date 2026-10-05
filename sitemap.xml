@@ -3,11 +3,12 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.ualincolnpark.com/</loc>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://www.ualincolnpark.com/assets/urban-alchemist-store-interior-lincoln-park-chicago.webp</image:loc>
-      <image:title>Urban Alchemist, 2219 N Clybourn Ave, Lincoln Park, Chicago</image:title>
+      <image:title>Conceptual Urban Alchemist storefront illustration</image:title>
     </image:image>
     <image:image>
       <image:loc>https://www.ualincolnpark.com/assets/urban-alchemist-slow-down-sunset-desk-chicago.webp</image:loc>
@@ -16,4 +17,7 @@
   </url>
   <url><loc>https://www.ualincolnpark.com/blog</loc><lastmod>2026-10-05</lastmod></url>
   <url><loc>https://www.ualincolnpark.com/blog/thca-vs-thc</loc><lastmod>2026-10-05</lastmod><image:image><image:loc>https://www.ualincolnpark.com/assets/thca-thc-research-editorial-v1.webp</image:loc></image:image><image:image><image:loc>https://www.ualincolnpark.com/assets/cannabinoid-label-reading-v1.svg</image:loc></image:image></url>
+  <url><loc>https://www.ualincolnpark.com/exotic-snacks-lincoln-park</loc><lastmod>2026-10-05</lastmod></url>
+  <url><loc>https://www.ualincolnpark.com/wellness-apothecary-lincoln-park</loc><lastmod>2026-10-05</lastmod></url>
+  <url><loc>https://www.ualincolnpark.com/visit</loc><lastmod>2026-10-05</lastmod></url>
 </urlset>

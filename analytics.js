@@ -16,7 +16,8 @@
   const sectionNames=new Map(sections.map((el,i)=>[el,'section_'+(i+1)]));
   const sectionName=el=>sectionNames.get(el)||safe(el?.tagName);
   const observed=new Set(),progress=new Set(),timers=new Map();
-  let observer,reading=false;
+  let observer,gateWatcher,reading=false;
+  const contentAvailable=()=>document.visibilityState==='visible'&&!document.querySelector('.gate');
   const destination=href=>{try{const u=new URL(href,location.origin+path);if(u.protocol==='tel:')return u.pathname.replace(/[^0-9]/g,'')==='13123754448'?'phone':'external_phone';if(u.protocol==='mailto:')return 'email';if(!/^https?:$/.test(u.protocol))return 'other';if(u.origin===location.origin){const p=u.pathname.replace(/\.html$/,'').replace(/\/$/,'')||'/';return pages.includes(p)?p:'internal_other'}if(/(^|\.)google\.[a-z.]+$/.test(u.hostname)&&(/maps/.test(u.pathname)||u.hostname.startsWith('maps.')))return /\/reviews(?:\/|$)/.test(u.pathname)?'reviews':'directions';if(/(^|\.)(instagram.com|tiktok.com|facebook.com)$/.test(u.hostname))return 'social';return 'outbound'}catch{return 'other'}};
   const debug=location.search==='?ua_debug=1';
   function send(name,fields){if(permitted()&&loaded)window.gtag('event',name,Object.assign({page_location:location.origin+path,page_title:'Urban Alchemist '+(path==='/'?'home':path.slice(1)),page_referrer:'',send_to:ID},debug?{debug_mode:true}:{},fields));}
@@ -39,12 +40,16 @@
     if(!observer&&typeof IntersectionObserver==='function'){
       observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
         const el=entry.target,name=sectionName(el);
-        const visible=entry.isIntersecting&&entry.intersectionRect.height>=Math.min(200,entry.boundingClientRect.height/2)&&document.visibilityState==='visible';
+        const visible=entry.isIntersecting&&entry.intersectionRect.height>=Math.min(200,entry.boundingClientRect.height/2)&&contentAvailable();
         if(!visible){clearTimeout(timers.get(el));timers.delete(el);return;}
         if(observed.has(name)||timers.has(el)||!permitted())return;
-        timers.set(el,setTimeout(()=>{timers.delete(el);if(!permitted()||document.visibilityState!=='visible')return;observed.add(name);send('section_view',{page:path,section:name});observer.unobserve(el);},1000));
+        timers.set(el,setTimeout(()=>{timers.delete(el);if(!permitted()||!contentAvailable())return;observed.add(name);send('section_view',{page:path,section:name});observer.unobserve(el);},1000));
       }),{threshold:[0,0.1,0.25,0.5,0.75,1]});
       sections.forEach(el=>observer.observe(el));
+    }else if(observer){clearTimers();observer.disconnect();sections.filter(el=>!observed.has(sectionName(el))).forEach(el=>observer.observe(el));}
+    if(!gateWatcher&&document.querySelector('.gate')&&typeof MutationObserver==='function'){
+      gateWatcher=new MutationObserver(()=>{if(!document.querySelector('.gate')){gateWatcher.disconnect();observeContent();}});
+      gateWatcher.observe(document.body,{childList:true});
     }
     if(!reading&&path.startsWith('/blog/')&&document.querySelector('.article-copy')){
       reading=true;window.addEventListener('scroll',readProgress,{passive:true});window.addEventListener('resize',readProgress,{passive:true});
@@ -52,7 +57,7 @@
   }
   // Article viewport depth milestones, not evidence that the text was read.
   function readProgress(){
-    if(!permitted()||!loaded||document.visibilityState!=='visible')return;
+    if(!permitted()||!loaded||!contentAvailable())return;
     const article=document.querySelector('.article-copy');if(!article)return;
     const rect=article.getBoundingClientRect(),ratio=Math.max(0,Math.min(1,(window.innerHeight-rect.top)/Math.max(rect.height,1)));
     [25,50,75,90].forEach(depth=>{if(ratio*100>=depth&&!progress.has(depth)){progress.add(depth);send('article_progress',{page:path,depth});}});

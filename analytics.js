@@ -10,7 +10,7 @@
   let consent=read(),loaded=false;
   const permitted=()=>consent==='granted'&&!blocked();
   const safe=v=>String(v||'unknown').toLowerCase().replace(/[^a-z0-9_-]/g,'_').slice(0,64);
-  const destination=href=>{try{const u=new URL(href,location.origin);if(u.protocol==='tel:')return 'phone';if(u.protocol==='mailto:')return 'email';if(!/^https?:$/.test(u.protocol))return 'other';if(u.origin===location.origin){const p=u.pathname.replace(/\.html$/,'').replace(/\/$/,'')||'/';return pages.includes(p)?p:'internal_other'}if(/(^|\.)google\.[a-z.]+$/.test(u.hostname)&&(/maps/.test(u.pathname)||u.hostname.startsWith('maps.')))return 'directions';if(/(^|\.)(instagram.com|tiktok.com|facebook.com)$/.test(u.hostname))return 'social';return 'outbound'}catch{return 'other'}};
+  const destination=href=>{try{const u=new URL(href,location.origin+path);if(u.protocol==='tel:')return u.pathname.replace(/[^0-9]/g,'')==='13123754448'?'phone':'external_phone';if(u.protocol==='mailto:')return 'email';if(!/^https?:$/.test(u.protocol))return 'other';if(u.origin===location.origin){const p=u.pathname.replace(/\.html$/,'').replace(/\/$/,'')||'/';return pages.includes(p)?p:'internal_other'}if(/(^|\.)google\.[a-z.]+$/.test(u.hostname)&&(/maps/.test(u.pathname)||u.hostname.startsWith('maps.')))return /\/reviews(?:\/|$)/.test(u.pathname)?'reviews':'directions';if(/(^|\.)(instagram.com|tiktok.com|facebook.com)$/.test(u.hostname))return 'social';return 'outbound'}catch{return 'other'}};
   const debug=location.search==='?ua_debug=1';
   function send(name,fields){if(permitted()&&loaded)window.gtag('event',name,Object.assign({page_location:location.origin+path,page_title:'Urban Alchemist '+(path==='/'?'home':path.slice(1)),page_referrer:'',send_to:ID},debug?{debug_mode:true}:{},fields));}
   function start(){
@@ -33,7 +33,7 @@
   document.addEventListener('click',e=>{
     if(!permitted())return;const target=e.target.closest?.('a,button,summary');
     if(!target||target.closest('form,[data-analytics-private],.gate,[id*="quiz"],[id*="onboarding"]'))return;
-    const area=target.closest('section,article,header,footer,nav');const href=target.getAttribute('href');
+    const area=target.closest('section,article,header,footer,nav,main');const href=target.getAttribute('href');
     send('site_interaction',{page:path,section:safe(area?.id||area?.getAttribute('aria-labelledby')||area?.tagName),element:safe(target.getAttribute('data-track-id')),type:target.tagName==='A'?'link':target.tagName==='SUMMARY'?'disclosure':'control',destination:href?destination(href):'none'});
   },{capture:true});
   start();

@@ -133,10 +133,25 @@
   var track=section.querySelector('.reviews-track');
   var group=section.querySelector('.reviews-group');
   var button=section.querySelector('.reviews-toggle');
+  var browse=section.querySelector('.reviews-browse');
+  var status=section.querySelector('.reviews-status');
+  var count=group.querySelectorAll('.review-card').length;
   var copy=group.cloneNode(true);
   copy.setAttribute('aria-hidden','true');
+  copy.setAttribute('inert','');
+  copy.querySelectorAll('[data-track-id]').forEach(function(el){el.removeAttribute('data-track-id');});
   copy.querySelectorAll('a').forEach(function(a){a.setAttribute('tabindex','-1');});
   track.appendChild(copy);section.classList.add('reviews-ready');button.hidden=false;
+  if(browse){
+    browse.hidden=false;browse.textContent='Browse '+count+' excerpts';
+    browse.addEventListener('click',function(){
+      var browsing=section.classList.toggle('reviews-browsing');
+      browse.setAttribute('aria-expanded',String(browsing));
+      browse.textContent=browsing?'Return to scrolling':'Browse '+count+' excerpts';
+      button.hidden=browsing;
+      if(status)status.textContent=browsing?'Showing all '+count+' excerpts available on this site. The full review collection is on Google.':count+' unique excerpts available below.';
+    });
+  }
   button.addEventListener('click',function(){
     var paused=section.classList.toggle('is-paused');
     button.setAttribute('aria-pressed',String(paused));

@@ -186,7 +186,7 @@ main > .tick + section,
   .hdr.stuck .hdr__logo img{height:34px}
   .hdr .btn{padding:.72rem 1rem;font-size:.66rem}
 }
-@media(max-width:560px){.hdr .btn span{display:none}.hdr .btn{padding:.9rem}}
+@media(max-width:560px){.hdr .btn{padding:.9rem}}
 @media(max-width:700px){.btn__x{display:none}}
 
 /* ---------- hero (photo) ---------- */
@@ -215,6 +215,8 @@ main > .tick + section,
   color:rgba(246,241,228,.9);text-shadow:0 2px 14px rgba(0,0,0,.5)}
 .hero .lede:last-of-type{margin-bottom:0}
 .hero__cta{display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-start;margin-top:clamp(28px,3.4vw,42px)}
+.hero__shop-note{margin:1rem 0 0;max-width:48ch;font-size:.82rem;line-height:1.6;color:rgba(246,241,228,.9)}
+@media(max-width:700px){.hero__shop-note{order:6;font-size:.72rem}}
 .hero__meta{display:flex;gap:1rem 2.2rem;flex-wrap:wrap;justify-content:flex-start;margin-top:clamp(30px,3.8vw,52px);padding-top:1.4rem;
   border-top:2px solid rgba(246,241,228,.22);font-size:.75rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(246,241,228,.8)}
 .hero__meta b{font-weight:600;color:var(--ember)}

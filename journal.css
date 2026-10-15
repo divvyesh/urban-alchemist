@@ -3,6 +3,8 @@
 .journal-brand{display:flex;align-items:center;gap:13px;font-family:var(--serif);font-size:22px;font-weight:700;line-height:1.2}
 .journal-brand img{width:54px;height:54px;object-fit:contain}.journal-brand small{display:block;font:11px var(--sans);text-transform:uppercase;letter-spacing:.15em;margin-top:6px}
 .journal-header nav{display:flex;gap:26px;font-size:14px}.journal-header nav a[aria-current]{border-bottom:1px solid var(--brass)}
+.journal-header nav{align-items:center}
+.journal-header .journal-shop{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:3px;background:var(--forest);color:var(--ivory);font-weight:600;white-space:nowrap}
 .journal a:focus-visible{outline:3px solid var(--brass);outline-offset:5px}.journal a:hover{text-decoration:underline;text-underline-offset:4px}
 .article-hero{padding:70px var(--pad) 76px;display:grid;grid-template-columns:1.5fr 1fr;gap:70px;align-items:center;max-width:1500px;margin:auto}
 .breadcrumb{display:block;font-size:13px;color:var(--mute);margin-bottom:40px}.article-hero h1,.journal-index h1{font-size:clamp(46px,6.6vw,88px);line-height:1.04;letter-spacing:-.045em}.article-hero h1 em,.journal-index h1 em{color:var(--forest)}

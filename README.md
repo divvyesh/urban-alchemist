@@ -28,7 +28,11 @@ Hussain's own line, taken literally: *"most people might not even know what that
 | `assets/` | The logo (background removed, cleaned), the storefront photo, and Shumi in seven poses. |
 
 ## Compliance
-No cart, no menu, no prices, no online ordering. Every CTA is directions or phone.
+The landing page remains a static store guide. The green **Shop Now** button opens our Quickvee storefront at `https://quickvee.com/merchant/SYE2217487IL?orderMethod=delivery` in a new tab, preserving the home page for an easy return. The label stays visible on mobile. Directions and phone links remain in the visit sections.
+
+Shopping links use ordinary HTML anchors with `target="_blank"` and `rel="noopener noreferrer"`; they work without JavaScript, optional analytics, pop-up scripts, API keys, or additional dependencies. The delivery query parameter selects the initial order method; Quickvee controls ordering hours, service areas, inventory, age verification, cart, payment and checkout. No checkout is embedded or proxied through this website.
+
+To return to the landing page, visitors switch to the original tab or close the shopping tab. A Home link **inside Quickvee** must be configured in the Quickvee merchant settings; this repository cannot modify Quickvee's navigation. Do not invent return URL parameters or inject code into the external storefront.
 - 21+ gate injected after content, so the page stays indexable
 - No disease or treatment claims — traditional-use framing only
 - FDA disclaimer verbatim in the footer, full body size, highest contrast in the block

@@ -76,7 +76,7 @@
         '<button class="btn btn--line" data-no>No</button>' +
       '</div>' +
       '<p class="fine">We check ID for anyone who appears under 30, every time.<br>' +
-      'Nothing on this site is offered for sale online.</p>' +
+      'Online shopping opens on our Quickvee storefront in a new tab.</p>' +
     '</div>';
   document.body.appendChild(g);
 

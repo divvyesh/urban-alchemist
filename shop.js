@@ -1,26 +1,31 @@
 (function () {
   'use strict';
 
-  var allowed = ['clarity', 'stamina', 'calm', 'seasonal', 'ritual', 'curious'];
-  var titles = { clarity: 'Clarity', stamina: 'Stamina', calm: 'Calm', seasonal: 'Seasonal', ritual: 'Ritual', curious: 'Curious' };
   var catalog = window.UA_SHOP_CATALOG;
   var available = !!catalog && Array.isArray(catalog.shelves) && Array.isArray(catalog.products);
   var requested = new URLSearchParams(window.location.search).get('feeling');
   var normalized = requested ? requested.trim().toLowerCase() : '';
-  var selected = allowed.indexOf(normalized) !== -1 ? normalized : 'curious';
+  var shelves = [];
+  var shelfById = Object.create(null);
   var products = [];
   var seen = Object.create(null);
+  var snacksUrl = 'https://quickvee.com/merchant/SYE2217487IL?category=Snacks&orderMethod=delivery&categoryId=106635&isSideBarFilter=true';
 
   function text(value) {
     return typeof value === 'string' ? value.trim() : '';
   }
 
-  function productUrl(value) {
+  function safeSlug(value) {
+    return typeof value === 'string' && value.length <= 64 && /^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$/.test(value);
+  }
+
+  function productDestination(value) {
     if (!text(value)) return null;
     try {
       var url = new URL(value);
       if (url.protocol !== 'https:' || (url.hostname !== 'quickvee.com' && url.hostname !== 'www.quickvee.com') || url.username || url.password) return null;
-      return url.href;
+      var listedId = url.searchParams.get('product');
+      return { href: url.href, group: listedId ? url.pathname + '|' + listedId : url.href, listedId: listedId };
     } catch (error) {
       return null;
     }
@@ -33,43 +38,96 @@
     return node;
   }
 
+  /* A flavor-specific card and its parent listing remain one inventory group. */
+  function uniqueGroups(items) {
+    var groups = [];
+    var positions = Object.create(null);
+    items.forEach(function (product) {
+      var position = positions[product.group];
+      if (position === undefined) {
+        positions[product.group] = groups.length;
+        groups.push(product);
+      } else if (product.parentListing && !groups[position].parentListing) {
+        groups[position] = product;
+      }
+    });
+    return groups;
+  }
+
   if (available) {
+    catalog.shelves.forEach(function (shelf) {
+      if (!shelf || !safeSlug(shelf.id) || shelf.id === 'all' || !text(shelf.title) || shelfById[shelf.id]) return;
+      var clean = { id: shelf.id, title: text(shelf.title), description: text(shelf.description), emptyMessage: text(shelf.emptyMessage) };
+      shelves.push(clean);
+      shelfById[clean.id] = clean;
+    });
+
     catalog.products.forEach(function (product) {
-      if (!product || !text(product.name) || !Array.isArray(product.shelves)) return;
-      var href = productUrl(product.href);
-      if (!href) return;
-      var shelves = product.shelves.filter(function (id) { return allowed.indexOf(id) !== -1; });
-      if (!shelves.length) return;
-      var key = text(String(product.id || '')) + '|' + text(product.variant) + '|' + href;
-      if (seen[key]) return;
-      seen[key] = true;
-      products.push({ name: text(product.name), variant: text(product.variant), summary: text(product.summary), href: href, shelves: shelves });
+      if (!product || !text(product.name)) return;
+      var destination = productDestination(product.href);
+      if (!destination) return;
+      var assignments = [];
+      var candidates = Array.isArray(product.shelves) ? product.shelves.slice() : [];
+      if (product.primaryShelf) candidates.push(product.primaryShelf);
+      candidates.forEach(function (id) {
+        if (typeof id === 'string' && shelfById[id] && assignments.indexOf(id) === -1) assignments.push(id);
+      });
+      var name = text(product.name);
+      var variant = text(product.variant);
+      var key = JSON.stringify([destination.group, name, variant]);
+      if (seen[key]) {
+        assignments.forEach(function (id) { if (seen[key].shelves.indexOf(id) === -1) seen[key].shelves.push(id); });
+        return;
+      }
+      var clean = { name: name, variant: variant, summary: text(product.summary), href: destination.href, group: destination.group, parentListing: String(product.id) === destination.listedId, shelves: assignments };
+      seen[key] = clean;
+      products.push(clean);
     });
   }
 
-  var shelf = available ? catalog.shelves.filter(function (item) { return item && item.id === selected; })[0] : null;
-  var title = titles[selected];
+  var allProducts = uniqueGroups(products);
+  var populated = shelves.filter(function (shelf) {
+    shelf.products = uniqueGroups(products.filter(function (product) { return product.shelves.indexOf(shelf.id) !== -1; }));
+    return shelf.products.length > 0;
+  });
+  var defaultId = populated.some(function (shelf) { return shelf.id === 'curious'; }) ? 'curious' : (populated.length ? populated[0].id : 'all');
+  var validRequest = (normalized === 'all' && allProducts.length > 0) || populated.some(function (shelf) { return shelf.id === normalized; });
+  var selected = validRequest ? normalized : defaultId;
+  var shelf = selected === 'all' ? null : shelfById[selected];
+  var title = shelf ? shelf.title : 'All products';
+  var matches = shelf ? shelf.products : allProducts;
   document.title = 'Shop ' + title + ' | Urban Alchemist, Lincoln Park';
-  document.getElementById('shop-title').textContent = 'Shop ' + title + '.';
-  document.getElementById('shop-description').textContent = shelf && text(shelf.description) ? text(shelf.description) : 'A few things for whatever your day has in mind.';
+  document.getElementById('shop-title').textContent = selected === 'all' ? 'Shop all products.' : 'Shop ' + title + '.';
+  document.getElementById('shop-description').textContent = shelf && shelf.description ? shelf.description : 'Explore snacks, drinks and other everyday finds, or choose a shelf for another way in.';
 
-  if (normalized && allowed.indexOf(normalized) === -1) {
+  if (available && normalized && !validRequest) {
     var queryNote = document.getElementById('shop-query-note');
-    queryNote.textContent = 'We couldn’t find that feeling, so we’ve opened Curious. Choose another shelf below if you like.';
+    queryNote.textContent = 'That shelf is not online right now, so we’ve opened ' + title + '. Choose another shelf below if you like.';
     queryNote.hidden = false;
   }
 
-  document.querySelectorAll('#shop-shelves [data-shelf]').forEach(function (link) {
-    var id = link.getAttribute('data-shelf');
-    var count = products.filter(function (product) { return product.shelves.indexOf(id) !== -1; }).length;
+  var navigation = document.getElementById('shop-shelves');
+  navigation.replaceChildren();
+  function addShelfLink(id, label, count) {
+    var link = element('a', '', label);
+    link.href = '/shop.html?feeling=' + encodeURIComponent(id);
+    link.setAttribute('data-shelf', id);
     if (id === selected) link.setAttribute('aria-current', 'page');
-    if (available) {
-      var countNode = element('span', 'shop-shelf-count', String(count));
-      countNode.setAttribute('aria-hidden', 'true');
-      link.appendChild(countNode);
-      link.setAttribute('aria-label', titles[id] + ', ' + count + (count === 1 ? ' product' : ' products'));
-    }
-  });
+    var countNode = element('span', 'shop-shelf-count', String(count));
+    countNode.setAttribute('aria-hidden', 'true');
+    link.appendChild(countNode);
+    link.setAttribute('aria-label', label + ', ' + count + (count === 1 ? ' product' : ' products'));
+    navigation.appendChild(link);
+  }
+  if (allProducts.length) addShelfLink('all', 'All products', allProducts.length);
+  populated.forEach(function (item) { addShelfLink(item.id, item.title, item.products.length); });
+  if (!available) {
+    var fallback = element('a', '', 'Browse snacks on Quickvee ↗');
+    fallback.href = snacksUrl;
+    fallback.target = '_blank';
+    fallback.rel = 'noopener noreferrer';
+    navigation.appendChild(fallback);
+  }
 
   if (available && /^\d{4}-\d{2}-\d{2}$/.test(catalog.verifiedAt || '')) {
     var checkedDate = new Date(catalog.verifiedAt + 'T12:00:00Z');
@@ -79,11 +137,10 @@
     }
   }
 
-  var matches = products.filter(function (product) { return product.shelves.indexOf(selected) !== -1; });
   var productList = document.getElementById('shop-products');
   var countLabel = document.getElementById('shop-count');
   countLabel.textContent = available ? matches.length + (matches.length === 1 ? ' product' : ' products') : '';
-  document.getElementById('shop-results-title').textContent = title + ' online';
+  document.getElementById('shop-results-title').textContent = selected === 'all' ? 'The online selection' : title + ' online';
 
   matches.forEach(function (product, index) {
     var card = element('article', 'shop-product');
@@ -107,13 +164,14 @@
 
   if (!matches.length) {
     document.getElementById('shop-empty').hidden = false;
-    if (available && shelf && text(shelf.emptyMessage)) document.getElementById('shop-empty-copy').textContent = text(shelf.emptyMessage);
+    document.getElementById('shop-empty-title').textContent = 'No verified online products are listed yet';
+    document.getElementById('shop-empty-copy').textContent = 'Call us to ask what is available in the shop today.';
     if (!available) {
       document.getElementById('shop-empty-title').textContent = 'The online selection is being refreshed.';
       document.getElementById('shop-empty-copy').textContent = 'Call us for today’s selection, or explore our Snacks collection on Quickvee.';
       document.getElementById('shop-checked').textContent = 'Current prices and availability are shown on Quickvee.';
       var browse = element('a', 'shop-empty__browse', 'Browse snacks on Quickvee ↗');
-      browse.href = 'https://quickvee.com/merchant/SYE2217487IL?category=Snacks&orderMethod=delivery&categoryId=106635&isSideBarFilter=true';
+      browse.href = snacksUrl;
       browse.target = '_blank';
       browse.rel = 'noopener noreferrer';
       document.getElementById('shop-empty').appendChild(browse);

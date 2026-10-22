@@ -3,13 +3,13 @@
 One page for **Urban Alchemist**, 2219 N Clybourn Ave, Lincoln Park, Chicago.
 
 ## The idea
-Hussain's own line, taken literally: *"most people might not even know what that product is — but they know what they want to feel."* So the page is sorted by feeling. Six shelves, each one showing exactly what's on it and what it's for, with Shumi introducing each.
+Hussain's own line, taken literally: *"most people might not even know what that product is — but they know what they want to feel."* So the page is sorted by feeling. Populated shelves group ordinary merchandise by occasion, preference and product format, with Shumi introducing the food and drink shelves.
 
 ## Structure
 1. **Hero** — the real logo, "Start with a feeling", directions + phone
 2. **The storefront** — the photograph, uncropped, with the address written over it
 3. **Shumi's intro** — sits below the storefront, hands off to the shelves
-4. **Start with a feeling** — Clarity · Stamina · Calm · Seasonal · Ritual · Curious. Each: product categories, how it helps, a line from Shumi
+4. **Start with a feeling** — Clarity · Stamina · Seasonal · Curious · Sweet Tooth · Refresh · Self Love. Empty collections are removed; each listed product has a primary category.
 5. **The Four Keys** — Lion's Mane, Cordyceps, Reishi, Chaga
 6. **The Sensory Bar** — lids off, smell first
 7. **The Snack Passport** — sorted by country
@@ -26,7 +26,7 @@ Hussain's own line, taken literally: *"most people might not even know what that
 | `gl.js` | Hand-rolled WebGL, no libraries — a drifting spore field and a slowly turning brass armillary built from the logo mark. |
 | `app.js` | Reveals, the Four Keys tabs, and the 21+ gate. |
 | `assets/` | The logo (background removed, cleaned), the storefront photo, and Shumi in seven poses. |
-| `shop.html`, `shop.js`, `shop.css` | Six feeling collections, product browsing and honest availability messages. |
+| `shop.html`, `shop.js`, `shop.css` | Populated feeling collections, a deduplicated All products view and Quickvee product links. |
 | `shop-catalog.js` | Dated ordinary-product mapping, exact Quickvee destinations and research references. |
 
 ## Compliance
@@ -34,7 +34,7 @@ The landing page remains a static store guide. The green **Shop Now** button ope
 
 Shopping links use ordinary HTML anchors with `target="_blank"` and `rel="noopener noreferrer"`; they work without JavaScript, optional analytics, pop-up scripts, API keys, or additional dependencies. The delivery query parameter selects the initial order method; Quickvee controls ordering hours, service areas, inventory, age verification, cart, payment and checkout. No checkout is embedded or proxied through this website.
 
-Each of the six feeling cards has a **Shop** action leading to `/shop.html?feeling=...`. `shop-catalog.js` contains ordinary-merchandise picks checked against Quickvee on October 22, 2026, with product links and manufacturer references. Clarity is a morning matcha-drink occasion; Stamina contains protein foods; Seasonal contains autumn sweets and warm noodles; Curious contains flavor discoveries. Calm and Ritual show honest empty states until current candle/fragrance listings are confirmed. The September 15 inventory and transcripts inform taxonomy, not current availability. Visitors review variants, current prices, and add individual items to their cart within Quickvee. This site does not automatically add shelf contents to a cart or claim guaranteed mood effects. No Quickvee merchant categories have been changed.
+Every feeling card has a **Shop** action leading to `/shop.html?feeling=...`. `shop-catalog.js` contains 26 ordinary-merchandise product groups checked against Quickvee on October 22, 2026, plus a separate matcha flavor card. Every record has `primaryShelf`; secondary assignments support relevant cross-browsing. Clarity contains the matcha beverage; Stamina protein foods; Seasonal autumn sweets and warm noodles; Curious savory snacks; Sweet Tooth confectionery; Refresh drinks and gum; Self Love Dame personal wellness. Calm and Ritual were removed because they had no current online picks. Shop navigation is generated from populated categories; retired category links fall back to a populated shelf. All products deduplicates actual Quickvee product IDs, so a parent listing and a named flavor are counted once. The historic September 15 export and transcripts inform taxonomy, not current stock. Visitors review variants, current prices, ingredients and directions, and add individual items within Quickvee. No guaranteed mood effects, automatic bulk cart action, or Quickvee merchant category changes are claimed.
 
 To return to the landing page, visitors switch to the original tab or close the shopping tab. A Home link **inside Quickvee** must be configured in the Quickvee merchant settings; this repository cannot modify Quickvee's navigation. Do not invent return URL parameters or inject code into the external storefront.
 - 21+ gate injected after content, so the page stays indexable

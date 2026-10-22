@@ -309,6 +309,7 @@ main > .tick + section,
 .feel__head .eyebrow{justify-content:center;white-space:nowrap}
 .feel__head h2{margin:0 auto .9rem;max-width:16ch}
 .feel__head .lede{margin:0 auto}
+.feel__all{margin-top:1.65rem}
 .grid6{max-width:var(--maxw);margin:0 auto;display:grid;gap:clamp(16px,2.2vw,28px);
   grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch}
 .card{height:100%;background:var(--paper);border:2px solid var(--rule-soft);border-radius:22px;
@@ -326,6 +327,8 @@ main > .tick + section,
 .card__n{font-family:var(--sans);font-size:.74rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;
   color:var(--brass);display:block;margin:.4rem 0 .55rem}
 .card h3{font-size:clamp(1.9rem,3.2vw,2.6rem);margin:0 0 1.1rem}
+.card__count{margin:-.55rem 0 1.1rem;font-size:.78rem;color:var(--mute);line-height:1.4}
+.card--personal .card__fig img{height:clamp(100px,10vw,140px);filter:none;animation:none}
 .card__actions{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.65rem;margin-top:auto;width:100%}
 .card__actions .card__more{margin-top:0}
 .card__shop{min-height:44px;padding:.7rem 1.35rem;font-size:.72rem;letter-spacing:.16em}
@@ -354,6 +357,7 @@ main > .tick + section,
 .says p{margin:0;position:relative;background:var(--ivory);border:2px solid var(--rule-soft);border-radius:4px 14px 14px 14px;
   padding:.8rem 1.05rem;font-family:var(--serif);font-weight:600;font-style:italic;font-size:1.02rem;color:var(--ink);line-height:1.45}
 @media(max-width:1080px){.grid6{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:1081px){.grid6 > .card:last-child:nth-child(3n+1){grid-column:2}}
 @media(max-width:640px){
   .grid6{grid-template-columns:1fr}
   .card__fig{height:158px}
@@ -581,6 +585,8 @@ main > .tick + section,
   .card__fig::before{width:104px}
   .card__n{font-size:.6rem;letter-spacing:.18em;margin:.3rem 0 .35rem}
   .card h3{font-size:1.28rem;margin-bottom:.7rem}
+  .card__count{margin:-.25rem 0 .8rem;font-size:.67rem}
+  .card--personal .card__fig img{height:78px}
   .card__actions{gap:.55rem}
   .card__shop{padding:.55rem .8rem;font-size:.6rem;letter-spacing:.1em}
   .card__more{padding:.55rem .8rem;font-size:.6rem;letter-spacing:.1em;gap:.35rem}

@@ -66,14 +66,15 @@
  "knowsAbout":["functional mushrooms","Lion's Mane","Cordyceps","Reishi","Chaga","nootropics","adaptogens","loose-leaf tea","herbal botanicals","exotic imported snacks","locally made glass"],
  "audience":{"@type":"Audience","audienceType":"Adults 21 and over"},
  "hasOfferCatalog":{
-   "@type":"OfferCatalog","name":"The Six Shelves",
+   "@type":"OfferCatalog","name":"The Feeling Shelves",
    "itemListElement":[
-     {"@type":"OfferCatalog","name":"Clarity","description":"Morning coffee and tea drink occasions; current online matcha pick"},
-     {"@type":"OfferCatalog","name":"Stamina","description":"Portable protein bars and easy meals for busy days"},
-     {"@type":"OfferCatalog","name":"Calm","description":"Candles and evening home atmosphere; ask about current availability"},
-     {"@type":"OfferCatalog","name":"Seasonal","description":"Autumn sweets and warm instant noodle meals"},
-     {"@type":"OfferCatalog","name":"Ritual","description":"Incense and room-fragrance routines; ask about current availability"},
-     {"@type":"OfferCatalog","name":"Curious","description":"Snacks, sweets and drinks for flavor and texture discovery"}
+     {"@type":"OfferCatalog","name":"Clarity","description":"Coffee and tea drinks for a morning ritual. Explore by taste and format."},
+     {"@type":"OfferCatalog","name":"Stamina","description":"Portable protein snacks and easy meals for busy days."},
+     {"@type":"OfferCatalog","name":"Seasonal","description":"Autumn sweets and warm noodle bowls for cooler days."},
+     {"@type":"OfferCatalog","name":"Curious","description":"Savory snacks and flavors worth exploring."},
+     {"@type":"OfferCatalog","name":"Sweet Tooth","description":"Chocolate, chewy sweets, mochi and playful confectionery textures."},
+     {"@type":"OfferCatalog","name":"Refresh","description":"Sodas, tea drinks, juice, gum and functional seltzers for a flavor break."},
+     {"@type":"OfferCatalog","name":"Self Love","description":"Dame personal-care devices, adult accessories and a dietary supplement. Review the exact item and package."}
    ]
  }
 },
@@ -253,18 +254,20 @@
 <section class="on-light feel" id="feel" aria-labelledby="feelh">
   <span class="orn" aria-hidden="true"><i class="motes"></i></span>
   <div class="feel__head rv">
-    <p class="eyebrow">Six shelves · One question</p>
+    <p class="eyebrow">Seven shelves · One question</p>
     <h2 class="d2" id="feelh">Pick a feeling.<br>We'll do the rest.</h2>
-    <p class="lede">Explore a shelf, then shop its current online picks. Choose products for your taste and routine.</p>
+    <p class="lede">Find a shelf for your taste and routine. Every online pick has a place.</p>
+    <a class="btn btn--line feel__all" href="/shop.html?feeling=all" data-track-id="shop-all-products">Browse all products <span aria-hidden="true">→</span></a>
   </div>
 
   <div class="grid6">
-    <article class="card rv" data-d="1">
+    <article class="card rv" data-d="1" data-feeling="clarity">
       <div class="card__fig"><img src="assets/urban-alchemist-shumi-clarity-lions-mane-shelf.webp" width="577" height="760" alt="Shumi introduces the Clarity shelf" loading="lazy"></div>
       <span class="card__n">Shelf 01</span>
       <h3>Clarity</h3>
+      <p class="card__count">1 online pick</p>
       <div class="card__actions">
-        <button class="card__more" type="button" aria-expanded="false" aria-controls="shelf01" data-track-id="button-1">
+        <button class="card__more" type="button" aria-expanded="false" aria-controls="shelf-clarity" data-track-id="shelf-details-clarity">
           <span class="card__more-t">See this shelf</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
         </button>
@@ -272,21 +275,21 @@
           <span>Shop</span><span aria-hidden="true">→</span>
         </a>
       </div>
-      <div class="card__panel" id="shelf01">
+      <div class="card__panel" id="shelf-clarity">
         <p class="card__sub">For a morning drink ritual.</p>
         <ul class="row__cats"><li>Pocas Strawberry Matcha Latte</li></ul>
-        <p class="row__how">Explore a strawberry-and-matcha latte by flavor and format. Choose the exact drink on Quickvee; this shelf is a way to browse a morning routine.</p>
-        <div class="says"><span class="says__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M4 5h16v11H9l-5 4V5Z"/></svg></span>
-          <p>A morning cup, chosen for your taste.</p></div>
+        <p class="row__how">Coffee and tea drinks for a morning ritual. Explore by taste and format. Choose the exact item and options on Quickvee.</p>
+        <div class="says"><span class="says__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M4 5h16v11H9l-5 4V5Z"/></svg></span><p>A morning cup, chosen for your taste.</p></div>
       </div>
     </article>
 
-    <article class="card rv" data-d="2">
+    <article class="card rv" data-d="2" data-feeling="stamina">
       <div class="card__fig"><img src="assets/urban-alchemist-shumi-stamina-cordyceps-shelf.webp" width="573" height="760" alt="Shumi introduces the Stamina shelf" loading="lazy"></div>
       <span class="card__n">Shelf 02</span>
       <h3>Stamina</h3>
+      <p class="card__count">3 online picks</p>
       <div class="card__actions">
-        <button class="card__more" type="button" aria-expanded="false" aria-controls="shelf02" data-track-id="button-2">
+        <button class="card__more" type="button" aria-expanded="false" aria-controls="shelf-stamina" data-track-id="shelf-details-stamina">
           <span class="card__more-t">See this shelf</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
         </button>
@@ -294,43 +297,21 @@
           <span>Shop</span><span aria-hidden="true">→</span>
         </a>
       </div>
-      <div class="card__panel" id="shelf02">
+      <div class="card__panel" id="shelf-stamina">
         <p class="card__sub">For a snack between plans.</p>
         <ul class="row__cats"><li>Barebells</li><li>Kodiak</li><li>DAVID</li><li>RXBAR</li><li>Volo + Vero ramen</li></ul>
-        <p class="row__how">Browse portable protein bars and an easy meal option. Review the individual package for ingredients, nutrition and preparation directions.</p>
-        <div class="says"><span class="says__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M4 5h16v11H9l-5 4V5Z"/></svg></span>
-          <p>Something for the bag, the desk, or the next stop.</p></div>
+        <p class="row__how">Portable protein snacks and easy meals for busy days. Choose the exact item and options on Quickvee.</p>
+        <div class="says"><span class="says__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M4 5h16v11H9l-5 4V5Z"/></svg></span><p>Something for the bag, the desk, or the next stop.</p></div>
       </div>
     </article>
 
-    <article class="card rv" data-d="3">
-      <div class="card__fig"><img src="assets/urban-alchemist-shumi-calm-reishi-tea-shelf.webp" width="640" height="760" alt="Shumi introduces the Calm shelf" loading="lazy"></div>
-      <span class="card__n">Shelf 03</span>
-      <h3>Calm</h3>
-      <div class="card__actions">
-        <button class="card__more" type="button" aria-expanded="false" aria-controls="shelf03" data-track-id="button-3">
-          <span class="card__more-t">See this shelf</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
-        </button>
-        <a class="btn btn--fill card__shop" href="/shop.html?feeling=calm" aria-label="Shop Calm" data-track-id="shop-calm">
-          <span>Shop</span><span aria-hidden="true">→</span>
-        </a>
-      </div>
-      <div class="card__panel" id="shelf03">
-        <p class="card__sub">For an evening at your own pace.</p>
-        <ul class="row__cats"><li>Candles</li><li>Home atmosphere</li></ul>
-        <p class="row__how">Explore a quieter evening through scent and atmosphere. Call us about the current candle selection; online picks will appear here when they are listed.</p>
-        <div class="says"><span class="says__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M4 5h16v11H9l-5 4V5Z"/></svg></span>
-          <p>One lamp. Your music. Your own pace.</p></div>
-      </div>
-    </article>
-
-    <article class="card rv" data-d="1">
+    <article class="card rv" data-d="3" data-feeling="seasonal">
       <div class="card__fig"><img src="assets/urban-alchemist-shumi-seasonal-chaga-shelf.webp" width="577" height="760" alt="Shumi introduces the Seasonal shelf" loading="lazy"></div>
-      <span class="card__n">Shelf 04</span>
+      <span class="card__n">Shelf 03</span>
       <h3>Seasonal</h3>
+      <p class="card__count">4 online picks</p>
       <div class="card__actions">
-        <button class="card__more" type="button" aria-expanded="false" aria-controls="shelf04" data-track-id="button-4">
+        <button class="card__more" type="button" aria-expanded="false" aria-controls="shelf-seasonal" data-track-id="shelf-details-seasonal">
           <span class="card__more-t">See this shelf</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
         </button>
@@ -338,43 +319,21 @@
           <span>Shop</span><span aria-hidden="true">→</span>
         </a>
       </div>
-      <div class="card__panel" id="shelf04">
+      <div class="card__panel" id="shelf-seasonal">
         <p class="card__sub">For autumn tastes and cooler days.</p>
-        <ul class="row__cats"><li>Pumpkin sweets</li><li>Caramel apple sweets</li><li>Mummy-shaped candy</li><li>Maruchan</li><li>Buldak</li><li>Volo + Vero ramen</li></ul>
-        <p class="row__how">Find autumn candy shapes and flavors, plus instant noodles for a warm-food occasion. Choose the exact flavor and follow its package directions.</p>
-        <div class="says"><span class="says__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M4 5h16v11H9l-5 4V5Z"/></svg></span>
-          <p>Something seasonal to taste. Something warm to prepare.</p></div>
+        <ul class="row__cats"><li>Autumn sweets</li><li>Maruchan</li><li>Buldak</li><li>Volo + Vero ramen</li></ul>
+        <p class="row__how">Autumn sweets and warm noodle bowls for cooler days. Choose the exact item and options on Quickvee.</p>
+        <div class="says"><span class="says__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M4 5h16v11H9l-5 4V5Z"/></svg></span><p>Something seasonal to taste. Something warm to prepare.</p></div>
       </div>
     </article>
 
-    <article class="card rv" data-d="2">
-      <div class="card__fig"><img src="assets/urban-alchemist-shumi-ritual-glass-shelf.webp" width="585" height="760" alt="Shumi introduces the Ritual shelf" loading="lazy"></div>
-      <span class="card__n">Shelf 05</span>
-      <h3>Ritual</h3>
-      <div class="card__actions">
-        <button class="card__more" type="button" aria-expanded="false" aria-controls="shelf05" data-track-id="button-5">
-          <span class="card__more-t">See this shelf</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
-        </button>
-        <a class="btn btn--fill card__shop" href="/shop.html?feeling=ritual" aria-label="Shop Ritual" data-track-id="shop-ritual">
-          <span>Shop</span><span aria-hidden="true">→</span>
-        </a>
-      </div>
-      <div class="card__panel" id="shelf05">
-        <p class="card__sub">For the routines that make a room yours.</p>
-        <ul class="row__cats"><li>Incense</li><li>Room fragrance</li></ul>
-        <p class="row__how">Explore home-fragrance routines by scent and format. Call us about the current incense and room-fragrance selection; online picks will appear here when they are listed.</p>
-        <div class="says"><span class="says__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M4 5h16v11H9l-5 4V5Z"/></svg></span>
-          <p>Pick the scent you would like to come home to.</p></div>
-      </div>
-    </article>
-
-    <article class="card rv" data-d="3">
+    <article class="card rv" data-d="1" data-feeling="curious">
       <div class="card__fig"><img src="assets/urban-alchemist-shumi-curious-exotic-snacks-shelf.webp" width="574" height="760" alt="Shumi introduces the Curious shelf" loading="lazy"></div>
-      <span class="card__n">Shelf 06</span>
+      <span class="card__n">Shelf 04</span>
       <h3>Curious</h3>
+      <p class="card__count">4 online picks</p>
       <div class="card__actions">
-        <button class="card__more" type="button" aria-expanded="false" aria-controls="shelf06" data-track-id="button-6">
+        <button class="card__more" type="button" aria-expanded="false" aria-controls="shelf-curious" data-track-id="shelf-details-curious">
           <span class="card__more-t">See this shelf</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
         </button>
@@ -382,12 +341,77 @@
           <span>Shop</span><span aria-hidden="true">→</span>
         </a>
       </div>
-      <div class="card__panel" id="shelf06">
-        <p class="card__sub">For the shelf that surprises you.</p>
-        <ul class="row__cats"><li>Snacks</li><li>Sweets</li><li>Sodas</li><li>Mochi</li><li>Biscuit sticks</li><li>Chocolate</li></ul>
-        <p class="row__how">Explore the store’s snacks, sweets and drinks by flavor, texture and format. Review the current variants on Quickvee before choosing.</p>
-        <div class="says"><span class="says__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M4 5h16v11H9l-5 4V5Z"/></svg></span>
-          <p>Start with the flavor you have never tried.</p></div>
+      <div class="card__panel" id="shelf-curious">
+        <p class="card__sub">For the next flavor you have not tried.</p>
+        <ul class="row__cats"><li>Lay’s Exotics</li><li>Doritos Exotics</li><li>Calbee</li><li>Chips</li></ul>
+        <p class="row__how">Savory snacks and flavors worth exploring. Choose the exact item and options on Quickvee.</p>
+        <div class="says"><span class="says__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M4 5h16v11H9l-5 4V5Z"/></svg></span><p>Start with a crunch you have never tried.</p></div>
+      </div>
+    </article>
+
+    <article class="card rv" data-d="2" data-feeling="sweet-tooth">
+      <div class="card__fig"><img src="assets/urban-alchemist-shumi-calm-reishi-tea-shelf.webp" width="640" height="760" alt="Shumi introduces the Sweet Tooth shelf" loading="lazy"></div>
+      <span class="card__n">Shelf 05</span>
+      <h3>Sweet Tooth</h3>
+      <p class="card__count">12 online picks</p>
+      <div class="card__actions">
+        <button class="card__more" type="button" aria-expanded="false" aria-controls="shelf-sweet-tooth" data-track-id="shelf-details-sweet-tooth">
+          <span class="card__more-t">See this shelf</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <a class="btn btn--fill card__shop" href="/shop.html?feeling=sweet-tooth" aria-label="Shop Sweet Tooth" data-track-id="shop-sweet-tooth">
+          <span>Shop</span><span aria-hidden="true">→</span>
+        </a>
+      </div>
+      <div class="card__panel" id="shelf-sweet-tooth">
+        <p class="card__sub">For a little something sweet.</p>
+        <ul class="row__cats"><li>Chocolate</li><li>Mochi</li><li>Biscuit sticks</li><li>Gummies</li><li>Lollipops</li></ul>
+        <p class="row__how">Chocolate, chewy sweets, mochi and playful confectionery textures. Choose the exact item and options on Quickvee.</p>
+        <div class="says"><span class="says__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M4 5h16v11H9l-5 4V5Z"/></svg></span><p>Pick your texture: crisp, chewy, soft or fluffy.</p></div>
+      </div>
+    </article>
+
+    <article class="card rv" data-d="3" data-feeling="refresh">
+      <div class="card__fig"><img src="assets/urban-alchemist-shumi-ritual-glass-shelf.webp" width="585" height="760" alt="Shumi introduces the Refresh shelf" loading="lazy"></div>
+      <span class="card__n">Shelf 06</span>
+      <h3>Refresh</h3>
+      <p class="card__count">4 online picks</p>
+      <div class="card__actions">
+        <button class="card__more" type="button" aria-expanded="false" aria-controls="shelf-refresh" data-track-id="shelf-details-refresh">
+          <span class="card__more-t">See this shelf</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <a class="btn btn--fill card__shop" href="/shop.html?feeling=refresh" aria-label="Shop Refresh" data-track-id="shop-refresh">
+          <span>Shop</span><span aria-hidden="true">→</span>
+        </a>
+      </div>
+      <div class="card__panel" id="shelf-refresh">
+        <p class="card__sub">For a sip or a fresh flavor.</p>
+        <ul class="row__cats"><li>Sodas</li><li>Tea drinks</li><li>Juice</li><li>Gum</li><li>Functional seltzer</li></ul>
+        <p class="row__how">Sodas, tea drinks, juice, gum and functional seltzers for a flavor break. Choose the exact item and options on Quickvee.</p>
+        <div class="says"><span class="says__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M4 5h16v11H9l-5 4V5Z"/></svg></span><p>Follow the flavor you are in the mood for.</p></div>
+      </div>
+    </article>
+
+    <article class="card rv card--personal" data-d="1" data-feeling="self-love">
+      <div class="card__fig"><img src="assets/urban-alchemist-logo-mark.webp" width="360" height="359" alt="Urban Alchemist personal wellness" loading="lazy"></div>
+      <span class="card__n">Shelf 07</span>
+      <h3>Self Love</h3>
+      <p class="card__count">1 online pick</p>
+      <div class="card__actions">
+        <button class="card__more" type="button" aria-expanded="false" aria-controls="shelf-self-love" data-track-id="shelf-details-self-love">
+          <span class="card__more-t">See this shelf</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <a class="btn btn--fill card__shop" href="/shop.html?feeling=self-love" aria-label="Shop Self Love" data-track-id="shop-self-love">
+          <span>Shop</span><span aria-hidden="true">→</span>
+        </a>
+      </div>
+      <div class="card__panel" id="shelf-self-love">
+        <p class="card__sub">Personal wellness on your own terms.</p>
+        <ul class="row__cats"><li>Personal-care devices</li><li>Adult accessories</li><li>Dietary supplement</li></ul>
+        <p class="row__how">Dame personal-care devices, adult accessories and a dietary supplement. Review the exact item and package. Choose the exact item and options on Quickvee.</p>
+        <div class="says"><span class="says__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M4 5h16v11H9l-5 4V5Z"/></svg></span><p>Choose the exact item for your own routine.</p></div>
       </div>
     </article>
   </div>

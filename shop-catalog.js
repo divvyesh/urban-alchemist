@@ -1,6 +1,7 @@
 /* Ordinary merchandise checked against the public Quickvee catalog on 2026-10-22.
-   These are discovery shelves, not claims of product efficacy.
-   Prices and checkout remain on Quickvee; no automatic cart mutation. */
+   Categories describe occasions, preferences and product formats, not guaranteed effects.
+   Every record has a primary category. Empty categories are not shown.
+   Prices, variants and checkout remain on Quickvee; no automatic cart mutation. */
 window.UA_SHOP_CATALOG = {
   "verifiedAt": "2026-10-22",
   "shelves": [
@@ -8,37 +9,43 @@ window.UA_SHOP_CATALOG = {
       "id": "clarity",
       "title": "Clarity",
       "description": "Coffee and tea drinks for a morning ritual. Explore by taste and format.",
-      "emptyMessage": "No online picks are listed for this shelf yet. Call us to ask what is available in the shop."
+      "emptyMessage": "No online picks are listed for this shelf yet. Explore another shelf or call the shop."
     },
     {
       "id": "stamina",
       "title": "Stamina",
       "description": "Portable protein snacks and easy meals for busy days.",
-      "emptyMessage": "No online picks are listed for this shelf yet. Call us to ask what is available in the shop."
-    },
-    {
-      "id": "calm",
-      "title": "Calm",
-      "description": "Candles and home atmosphere for an evening at your own pace.",
-      "emptyMessage": "Call us to ask about the current candle selection, or explore another shelf online."
+      "emptyMessage": "No online picks are listed for this shelf yet. Explore another shelf or call the shop."
     },
     {
       "id": "seasonal",
       "title": "Seasonal",
       "description": "Autumn sweets and warm noodle bowls for cooler days.",
-      "emptyMessage": "No online picks are listed for this shelf yet. Call us to ask what is available in the shop."
-    },
-    {
-      "id": "ritual",
-      "title": "Ritual",
-      "description": "Incense and room fragrance for everyday home routines.",
-      "emptyMessage": "Call us to ask about the current incense and room-fragrance selection, or explore another shelf online."
+      "emptyMessage": "No online picks are listed for this shelf yet. Explore another shelf or call the shop."
     },
     {
       "id": "curious",
       "title": "Curious",
-      "description": "Snacks, sweets and drinks for flavor and texture discovery.",
-      "emptyMessage": "No online picks are listed for this shelf yet. Call us to ask what is available in the shop."
+      "description": "Savory snacks and flavors worth exploring.",
+      "emptyMessage": "No online picks are listed for this shelf yet. Explore another shelf or call the shop."
+    },
+    {
+      "id": "sweet-tooth",
+      "title": "Sweet Tooth",
+      "description": "Chocolate, chewy sweets, mochi and playful confectionery textures.",
+      "emptyMessage": "No online picks are listed for this shelf yet. Explore another shelf or call the shop."
+    },
+    {
+      "id": "refresh",
+      "title": "Refresh",
+      "description": "Sodas, tea drinks, juice, gum and functional seltzers for a flavor break.",
+      "emptyMessage": "No online picks are listed for this shelf yet. Explore another shelf or call the shop."
+    },
+    {
+      "id": "self-love",
+      "title": "Self Love",
+      "description": "Dame personal-care devices, adult accessories and a dietary supplement. Review the exact item and package.",
+      "emptyMessage": "No online picks are listed for this shelf yet. Explore another shelf or call the shop."
     }
   ],
   "products": [
@@ -49,12 +56,12 @@ window.UA_SHOP_CATALOG = {
       "summary": "Chocolate-coated protein bars for a portable snack. Choose your flavor on Quickvee.",
       "href": "https://quickvee.com/product/SYE2217487IL?orderMethod=delivery&categoryid=106635%2C106642&product=13980739",
       "shelves": [
-        "stamina",
-        "curious"
+        "stamina"
       ],
       "sources": [
         "https://shop.barebells.com/collections/original-protein-bars"
-      ]
+      ],
+      "primaryShelf": "stamina"
     },
     {
       "id": "13945027",
@@ -63,11 +70,12 @@ window.UA_SHOP_CATALOG = {
       "summary": "Explore this mango confectionery listing and its package details.",
       "href": "https://quickvee.com/product/SYE2217487IL?orderMethod=delivery&categoryid=106635&product=13945027",
       "shelves": [
-        "curious"
+        "sweet-tooth"
       ],
       "sources": [
         "https://www.casali.world/de-at"
-      ]
+      ],
+      "primaryShelf": "sweet-tooth"
     },
     {
       "id": "13945018",
@@ -76,11 +84,12 @@ window.UA_SHOP_CATALOG = {
       "summary": "Explore the listed KitKat flavors and formats.",
       "href": "https://quickvee.com/product/SYE2217487IL?orderMethod=delivery&categoryid=106635&product=13945018",
       "shelves": [
-        "curious"
+        "sweet-tooth"
       ],
       "sources": [
         "https://kitkat.nestle.jp/products"
-      ]
+      ],
+      "primaryShelf": "sweet-tooth"
     },
     {
       "id": "13945003",
@@ -89,11 +98,12 @@ window.UA_SHOP_CATALOG = {
       "summary": "Browse the available chocolate options.",
       "href": "https://quickvee.com/product/SYE2217487IL?orderMethod=delivery&categoryid=106635&product=13945003",
       "shelves": [
-        "curious"
+        "sweet-tooth"
       ],
       "sources": [
         "https://www.mondelezinternational.com/our-brands/milka/index.html"
-      ]
+      ],
+      "primaryShelf": "sweet-tooth"
     },
     {
       "id": "13944991",
@@ -102,11 +112,12 @@ window.UA_SHOP_CATALOG = {
       "summary": "Explore this Oreo listing and choose from the store’s options.",
       "href": "https://quickvee.com/product/SYE2217487IL?orderMethod=delivery&categoryid=106635&product=13944991",
       "shelves": [
-        "curious"
+        "sweet-tooth"
       ],
       "sources": [
         "https://www.mondelezinternational.com/our-brands/oreo/"
-      ]
+      ],
+      "primaryShelf": "sweet-tooth"
     },
     {
       "id": "13944983",
@@ -115,11 +126,12 @@ window.UA_SHOP_CATALOG = {
       "summary": "A biscuit option for exploring a familiar brand in another format.",
       "href": "https://quickvee.com/product/SYE2217487IL?orderMethod=delivery&categoryid=106635%2C106642&product=13944983",
       "shelves": [
-        "curious"
+        "sweet-tooth"
       ],
       "sources": [
         "https://www.marschocolatedrinksandtreats.com/"
-      ]
+      ],
+      "primaryShelf": "sweet-tooth"
     },
     {
       "id": "13944975",
@@ -128,11 +140,12 @@ window.UA_SHOP_CATALOG = {
       "summary": "Strawberry confectionery with an aerated texture. Review the exact format on Quickvee.",
       "href": "https://quickvee.com/product/SYE2217487IL?orderMethod=delivery&categoryid=106635&product=13944975",
       "shelves": [
-        "curious"
+        "sweet-tooth"
       ],
       "sources": [
         "https://www.glico.com/global/100th_history_contents/highlight/product/008.html"
-      ]
+      ],
+      "primaryShelf": "sweet-tooth"
     },
     {
       "id": "13944967",
@@ -141,11 +154,12 @@ window.UA_SHOP_CATALOG = {
       "summary": "Cotton-candy-like fluff for exploring a different sweet texture.",
       "href": "https://quickvee.com/product/SYE2217487IL?orderMethod=delivery&categoryid=106635&product=13944967",
       "shelves": [
-        "curious"
+        "sweet-tooth"
       ],
       "sources": [
         "https://moooshcandy.com/"
-      ]
+      ],
+      "primaryShelf": "sweet-tooth"
     },
     {
       "id": "13944952",
@@ -154,12 +168,12 @@ window.UA_SHOP_CATALOG = {
       "summary": "A warm instant noodle cup. Choose a flavor and follow the package preparation directions.",
       "href": "https://quickvee.com/product/SYE2217487IL?orderMethod=delivery&categoryid=106635%2C106642&product=13944952",
       "shelves": [
-        "seasonal",
-        "curious"
+        "seasonal"
       ],
       "sources": [
         "https://maruchan.com/products/instant-lunch"
-      ]
+      ],
+      "primaryShelf": "seasonal"
     },
     {
       "id": "13944944",
@@ -168,12 +182,12 @@ window.UA_SHOP_CATALOG = {
       "summary": "Spicy stir-fried noodles for a warm-food occasion. Choose the heat level you prefer.",
       "href": "https://quickvee.com/product/SYE2217487IL?orderMethod=delivery&categoryid=106635%2C106642&product=13944944",
       "shelves": [
-        "seasonal",
-        "curious"
+        "seasonal"
       ],
       "sources": [
         "https://samyangamerica.com/buldak/original"
-      ]
+      ],
+      "primaryShelf": "seasonal"
     },
     {
       "id": "13944933",
@@ -183,10 +197,10 @@ window.UA_SHOP_CATALOG = {
       "href": "https://quickvee.com/product/SYE2217487IL?orderMethod=delivery&categoryid=106635%2C106642&product=13944933",
       "shelves": [
         "stamina",
-        "seasonal",
-        "curious"
+        "seasonal"
       ],
-      "sources": []
+      "sources": [],
+      "primaryShelf": "stamina"
     },
     {
       "id": "13896023",
@@ -195,10 +209,10 @@ window.UA_SHOP_CATALOG = {
       "summary": "Packaged bars for a desk drawer or a day out. Choose the brand and flavor on Quickvee.",
       "href": "https://quickvee.com/product/SYE2217487IL?orderMethod=delivery&categoryid=106634%2C106635&product=13896023",
       "shelves": [
-        "stamina",
-        "curious"
+        "stamina"
       ],
-      "sources": []
+      "sources": [],
+      "primaryShelf": "stamina"
     },
     {
       "id": "13847801",
@@ -207,11 +221,12 @@ window.UA_SHOP_CATALOG = {
       "summary": "Explore coated biscuit sticks in the store’s available flavors.",
       "href": "https://quickvee.com/product/SYE2217487IL?orderMethod=delivery&categoryid=106635&product=13847801",
       "shelves": [
-        "curious"
+        "sweet-tooth"
       ],
       "sources": [
         "https://www.pocky.com/products/"
-      ]
+      ],
+      "primaryShelf": "sweet-tooth"
     },
     {
       "id": "13847798",
@@ -222,7 +237,8 @@ window.UA_SHOP_CATALOG = {
       "shelves": [
         "curious"
       ],
-      "sources": []
+      "sources": [],
+      "primaryShelf": "curious"
     },
     {
       "id": "13847751",
@@ -231,9 +247,10 @@ window.UA_SHOP_CATALOG = {
       "summary": "Explore the listed gum flavors.",
       "href": "https://quickvee.com/product/SYE2217487IL?orderMethod=delivery&categoryid=106635&product=13847751",
       "shelves": [
-        "curious"
+        "refresh"
       ],
-      "sources": []
+      "sources": [],
+      "primaryShelf": "refresh"
     },
     {
       "id": "13847743",
@@ -242,9 +259,10 @@ window.UA_SHOP_CATALOG = {
       "summary": "Bear-shaped honey hard candy, as described in the store listing.",
       "href": "https://quickvee.com/product/SYE2217487IL?orderMethod=delivery&categoryid=106635&product=13847743",
       "shelves": [
-        "curious"
+        "sweet-tooth"
       ],
-      "sources": []
+      "sources": [],
+      "primaryShelf": "sweet-tooth"
     },
     {
       "id": "13847738",
@@ -253,10 +271,11 @@ window.UA_SHOP_CATALOG = {
       "summary": "For the Seasonal shelf, choose Amos Peelerz Pumpkin, Mummies or Caramel Apple. Other candy options are also listed.",
       "href": "https://quickvee.com/product/SYE2217487IL?orderMethod=delivery&categoryid=106635&product=13847738",
       "shelves": [
-        "seasonal",
-        "curious"
+        "sweet-tooth",
+        "seasonal"
       ],
-      "sources": []
+      "sources": [],
+      "primaryShelf": "sweet-tooth"
     },
     {
       "id": "13847710",
@@ -265,9 +284,10 @@ window.UA_SHOP_CATALOG = {
       "summary": "Explore the drink options and review the exact flavor before adding an item.",
       "href": "https://quickvee.com/product/SYE2217487IL?orderMethod=delivery&categoryid=106635&product=13847710",
       "shelves": [
-        "curious"
+        "refresh"
       ],
-      "sources": []
+      "sources": [],
+      "primaryShelf": "refresh"
     },
     {
       "id": "13847681",
@@ -276,11 +296,12 @@ window.UA_SHOP_CATALOG = {
       "summary": "Explore soft, chewy mochi and the available fillings.",
       "href": "https://quickvee.com/product/SYE2217487IL?orderMethod=delivery&categoryid=106635&product=13847681",
       "shelves": [
-        "curious"
+        "sweet-tooth"
       ],
       "sources": [
         "https://www.royal-family.com.tw/eng/products.php?func=p_list&pc_parent=19"
-      ]
+      ],
+      "primaryShelf": "sweet-tooth"
     },
     {
       "id": "13847673",
@@ -289,11 +310,12 @@ window.UA_SHOP_CATALOG = {
       "summary": "Explore the store’s Skittles flavors and formats.",
       "href": "https://quickvee.com/product/SYE2217487IL?orderMethod=delivery&categoryid=106635&product=13847673",
       "shelves": [
-        "curious"
+        "sweet-tooth"
       ],
       "sources": [
         "https://www.skittles.com/"
-      ]
+      ],
+      "primaryShelf": "sweet-tooth"
     },
     {
       "id": "13847664",
@@ -302,9 +324,10 @@ window.UA_SHOP_CATALOG = {
       "summary": "Explore the listed soda flavors, sizes and countries of origin on Quickvee.",
       "href": "https://quickvee.com/product/SYE2217487IL?orderMethod=delivery&categoryid=106635&product=13847664",
       "shelves": [
-        "curious"
+        "refresh"
       ],
-      "sources": []
+      "sources": [],
+      "primaryShelf": "refresh"
     },
     {
       "id": "13847606",
@@ -317,7 +340,8 @@ window.UA_SHOP_CATALOG = {
       ],
       "sources": [
         "https://www.calbee.co.jp/en/products/"
-      ]
+      ],
+      "primaryShelf": "curious"
     },
     {
       "id": "13847600",
@@ -330,7 +354,8 @@ window.UA_SHOP_CATALOG = {
       ],
       "sources": [
         "https://www.doritos.com/search"
-      ]
+      ],
+      "primaryShelf": "curious"
     },
     {
       "id": "13847593",
@@ -343,7 +368,8 @@ window.UA_SHOP_CATALOG = {
       ],
       "sources": [
         "https://www.lays.com/"
-      ]
+      ],
+      "primaryShelf": "curious"
     },
     {
       "id": "13847710-matcha",
@@ -356,6 +382,42 @@ window.UA_SHOP_CATALOG = {
       ],
       "sources": [
         "https://www.pocas.com/strawberry-matcha-latte"
+      ],
+      "primaryShelf": "clarity"
+    },
+    {
+      "id": "13948460",
+      "name": "Dame personal wellness",
+      "variant": "Personal-care devices, Dice, or Daily Desire Gummies",
+      "summary": "Dame devices and adult accessories, plus a dietary supplement option. The gummies are a supplement, not ordinary candy. Choose the exact item and review its label on Quickvee.",
+      "href": "https://quickvee.com/product/SYE2217487IL?orderMethod=delivery&categoryid=106633%2C106642&product=13948460",
+      "primaryShelf": "self-love",
+      "shelves": [
+        "self-love"
+      ],
+      "sources": [
+        "https://dame.com/products/dip",
+        "https://dame.com/products/com",
+        "https://dame.com/products/pom",
+        "https://dame.com/products/tiny-wand-emojibator",
+        "https://dame.com/products/dice",
+        "https://dame.com/products/desire-gummies"
+      ]
+    },
+    {
+      "id": "13895878",
+      "name": "PolkaDot Adaptogenic Seltzer",
+      "variant": "Strawberry Lemonade, Tropical Punch or Berry Blast",
+      "summary": "A PolkaDotFx sparkling beverage with named botanical and functional mushroom ingredients. Choose the flavor and review that can’s ingredients and directions.",
+      "href": "https://quickvee.com/product/SYE2217487IL?orderMethod=delivery&categoryid=106638&product=13895878",
+      "primaryShelf": "refresh",
+      "shelves": [
+        "refresh"
+      ],
+      "sources": [
+        "https://polkadotbrand.com/products/spark-seltzer-6-pack",
+        "https://polkadotbrand.com/products/polkadot-seltzer-connect",
+        "https://polkadotbrand.com/products/polkadot-seltzer-revive"
       ]
     }
   ]

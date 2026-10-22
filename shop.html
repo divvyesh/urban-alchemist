@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Shop by Feeling | Urban Alchemist, Lincoln Park</title>
+  <meta name="description" content="Explore Urban Alchemist's online selection by feeling. Choose a product, then review its options and availability on Quickvee.">
+  <meta name="theme-color" content="#F6F1E4">
+  <link rel="icon" href="/assets/urban-alchemist-logo-mark.webp">
+  <link rel="canonical" href="https://www.ualincolnpark.com/shop">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,600;1,9..144,700&family=Jost:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/shop.css">
+</head>
+<body class="shop-page">
+  <a class="skip" href="#shop-results">Skip to products</a>
+  <header class="hdr shop-header" id="hdr">
+    <a class="hdr__logo" href="/" aria-label="Urban Alchemist, home">
+      <img src="/assets/urban-alchemist-logo-lockup.webp" width="900" height="672" alt="Urban Alchemist">
+      <span class="hdr__place">Lincoln Park<br>Chicago &middot; 21+</span>
+    </a>
+    <nav class="hdr__nav" aria-label="Main navigation">
+      <a href="/#feel">The Feeling Menu</a>
+      <a href="/blog">Journal</a>
+      <a href="/visit">Visit</a>
+    </nav>
+    <a class="shop-home" href="/">Back to the house <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main class="shop-main">
+    <section class="shop-intro" aria-labelledby="shop-title">
+      <div class="wrap">
+        <p class="eyebrow">The feeling menu</p>
+        <div class="shop-intro__row">
+          <div>
+            <h1 id="shop-title">Shop by feeling.</h1>
+            <p class="shop-description" id="shop-description">A few things for whatever your day has in mind.</p>
+          </div>
+          <p class="shop-how">Choose a product, then review options and add it to your cart on Quickvee.</p>
+        </div>
+        <p class="shop-query-note" id="shop-query-note" hidden></p>
+        <nav class="shop-shelves" aria-label="Shop by feeling" id="shop-shelves">
+          <a href="/shop.html?feeling=clarity" data-shelf="clarity">Clarity</a>
+          <a href="/shop.html?feeling=stamina" data-shelf="stamina">Stamina</a>
+          <a href="/shop.html?feeling=calm" data-shelf="calm">Calm</a>
+          <a href="/shop.html?feeling=seasonal" data-shelf="seasonal">Seasonal</a>
+          <a href="/shop.html?feeling=ritual" data-shelf="ritual">Ritual</a>
+          <a href="/shop.html?feeling=curious" data-shelf="curious">Curious</a>
+        </nav>
+      </div>
+    </section>
+
+    <section class="shop-results" id="shop-results" aria-labelledby="shop-results-title" tabindex="-1">
+      <div class="wrap">
+        <div class="shop-results__heading">
+          <h2 id="shop-results-title">The online selection</h2>
+          <p class="shop-count" id="shop-count" role="status"></p>
+        </div>
+        <p class="shop-checked" id="shop-checked">Online selection checked October 22, 2026. Current prices and availability are shown on Quickvee.</p>
+        <div class="shop-products" id="shop-products"></div>
+        <div class="shop-empty" id="shop-empty" hidden>
+          <span class="shop-empty__mark" aria-hidden="true">&bull;</span>
+          <h3 id="shop-empty-title">No online picks listed here yet</h3>
+          <p id="shop-empty-copy">Ask us what is on the shelves today, or try another feeling above.</p>
+          <a class="btn btn--fill" href="tel:+13123754448"><span>Call the shop</span></a>
+        </div>
+        <noscript>
+          <div class="shop-empty">
+            <h3>Explore the snack shelf.</h3>
+            <p>Browse our online Snacks collection, then choose your products and options on Quickvee.</p>
+            <a class="btn btn--fill" href="https://quickvee.com/merchant/SYE2217487IL?category=Snacks&amp;orderMethod=delivery&amp;categoryId=106635&amp;isSideBarFilter=true" target="_blank" rel="noopener noreferrer"><span>Browse snacks on Quickvee ↗</span></a>
+          </div>
+        </noscript>
+      </div>
+    </section>
+  </main>
+
+  <footer class="shop-footer">
+    <div class="wrap shop-footer__in">
+      <p><strong>Urban Alchemist</strong><br>2219 N Clybourn Ave &middot; Lincoln Park, Chicago &middot; 21+</p>
+      <p><a href="/visit">Plan a visit</a><a href="tel:+13123754448">(312) 375-4448</a></p>
+    </div>
+  </footer>
+  <script src="/shop-catalog.js" defer></script>
+  <script src="/shop.js" defer></script>
+  <script src="/app.js" defer></script>
+</body>
+</html>

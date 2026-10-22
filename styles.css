@@ -326,6 +326,9 @@ main > .tick + section,
 .card__n{font-family:var(--sans);font-size:.74rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;
   color:var(--brass);display:block;margin:.4rem 0 .55rem}
 .card h3{font-size:clamp(1.9rem,3.2vw,2.6rem);margin:0 0 1.1rem}
+.card__actions{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.65rem;margin-top:auto;width:100%}
+.card__actions .card__more{margin-top:0}
+.card__shop{min-height:44px;padding:.7rem 1.35rem;font-size:.72rem;letter-spacing:.16em}
 .card__more{display:none;margin-top:auto;align-items:center;gap:.5rem;
   border:2px solid var(--ink);border-radius:999px;padding:.7rem 1.35rem;
   font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);
@@ -578,6 +581,8 @@ main > .tick + section,
   .card__fig::before{width:104px}
   .card__n{font-size:.6rem;letter-spacing:.18em;margin:.3rem 0 .35rem}
   .card h3{font-size:1.28rem;margin-bottom:.7rem}
+  .card__actions{gap:.55rem}
+  .card__shop{padding:.55rem .8rem;font-size:.6rem;letter-spacing:.1em}
   .card__more{padding:.55rem .8rem;font-size:.6rem;letter-spacing:.1em;gap:.35rem}
   .card__more svg{width:11px;height:11px}
   .card__panel{margin-top:1rem;padding-top:1rem}

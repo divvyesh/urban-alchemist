@@ -6,7 +6,7 @@ The landing page combines the original brand experience with all delivery additi
 
 ## Preserved website and delivery additions
 
-All 12 original sections remain: sunset hero/WebGL, storefront illustration, introduction, Worth the Walk band, seven illustrated Shumi shelves, jar wall, Snack Passport, 14-question original FAQ, six audience doors, discovery links, three-review carousel and full Visit/QR section. The original ticker, decorative effects, navigation, footer, shelf disclosures and review controls remain. The Snack Passport now displays all 24 snack-collection product groups (22 foods/snacks and two drink groups), with merchant photos, catalog descriptions and direct product shopping links; flavor variants stay on Quickvee.
+All 12 original sections remain: sunset hero/WebGL, storefront illustration, introduction, Worth the Walk band, six illustrated Shumi shelves, jar wall, Snack Passport, 14-question original FAQ, six audience doors, discovery links, three-review carousel and full Visit/QR section. The original ticker, decorative effects, navigation, footer, shelf disclosures and review controls remain. The Snack Passport now displays all 24 snack-collection product groups (22 foods/snacks and two drink groups), with merchant photos, catalog descriptions and direct product shopping links; flavor variants stay on Quickvee.
 
 Seven delivery sections remain: delivery hero, featured-product carousel, product descriptions/store-review feature, ordering steps, five delivery FAQs, local-store card and closing shopping CTA. The duplicate compact feeling cards were removed; the illustrated Shumi shelves remain the single feeling menu. The announcement, benefits band and sticky mobile shopping action remain. Together the page has 19 sections and 19 FAQ questions. Original anchors keep their IDs; delivery modules use distinct IDs to prevent collisions.
 
@@ -22,7 +22,7 @@ Existing copy that implied universal stock, batch testing, product legality, ope
 
 ## Content and evidence
 
-The current catalog has 27 records representing 26 verified ordinary-merchandise product groups. Every record has a primary category. The seven populated categories are Clarity, Stamina, Seasonal, Curious, Sweet Tooth, Refresh and Self Love. Navigation omits empty categories, and retired shelf queries fall back to a populated shelf.
+The current catalog has 27 records representing 26 verified ordinary-merchandise product groups. Every record has a primary category. The seven populated categories are Clarity, Stamina, Seasonal, Curious, Sweet Tooth, Refresh and Self Love. The homepage presents six feeling cards; the Self Love card was removed at the owner’s request. The product browser retains all seven catalog categories and all product records. Navigation omits empty categories, and retired shelf queries fall back to a populated shelf.
 
 The six featured products are Lay’s Exotics, Doritos Exotics, Exotics Drinks, Pocky, Barebells protein bars and Buldak. They are labeled **Featured picks**, without sales-ranking claims. Transcripts support leading with snacks, drinks, Lay’s and Doritos; no SKU sales history was supplied.
 

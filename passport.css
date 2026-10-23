@@ -1,0 +1,42 @@
+/* The complete snack collection within the original forest-and-gold Passport. */
+.pass .pass__catalog{margin-top:clamp(38px,5vw,66px)}
+.pass .pass__catalog-head{display:flex;align-items:end;justify-content:space-between;gap:20px;padding-bottom:22px;margin-bottom:24px;border-bottom:1px solid rgba(215,172,99,.4)}
+.pass .pass__catalog-head h3{font-family:var(--serif);font-size:clamp(1.7rem,3.2vw,2.6rem);font-weight:800;line-height:1.08;color:var(--ivory);margin:0;text-wrap:balance}
+.pass .pass__count{font-size:.86rem;line-height:1.5;color:rgba(246,241,228,.78);margin:0;max-width:36ch;text-align:right}
+.pass .pass__products{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;list-style:none;padding:0;margin:0}
+.pass .pass__product{display:flex;flex-direction:column;min-width:0;margin:0;background:var(--paper);color:var(--ink-2);border:1px solid rgba(215,172,99,.42);border-radius:12px;overflow:hidden;box-shadow:0 8px 24px rgba(6,17,11,.13)}
+.pass .pass__product-image{display:block;position:relative;aspect-ratio:4/3;min-width:0;background:#fff;overflow:hidden;border-bottom:1px solid var(--rule-soft)}
+.pass .pass__product-image img{display:block;width:100%;height:100%;object-fit:contain;padding:16px}
+.pass .pass__product-copy{display:flex;flex:1;flex-direction:column;align-items:stretch;min-width:0;padding:20px}
+.pass .pass__product-type{margin:0 0 10px;color:var(--brass);font-family:var(--sans);font-size:.65rem;font-weight:600;letter-spacing:.15em;line-height:1.4;text-transform:uppercase}
+.pass .pass__product h4{margin:0 0 12px;color:var(--forest);font-family:var(--serif);font-variation-settings:"SOFT" 100,"WONK" 0;font-size:clamp(1.12rem,1.7vw,1.5rem);font-weight:700;line-height:1.18;letter-spacing:-.02em;overflow-wrap:anywhere;text-wrap:balance}
+.pass .pass__product-description{flex:1;margin:0 0 20px;color:var(--mute);font-size:.87rem;line-height:1.55;overflow-wrap:anywhere}
+.pass .pass__product-shop{display:flex;justify-content:center;align-items:center;gap:9px;width:100%;min-height:44px;margin-top:auto;padding:12px 10px;background:var(--forest);color:var(--ivory);border:1px solid var(--forest);border-radius:4px;box-shadow:none;font-family:var(--sans);font-size:.69rem;font-weight:600;line-height:1.4;letter-spacing:.12em;text-align:center;text-transform:uppercase}
+.pass .pass__product-shop::before,.pass .pass__product-shop::after{display:none}
+.pass .pass__product-shop:hover{transform:none;background:var(--deep);border-color:var(--deep);color:var(--ivory);box-shadow:none}
+.pass .pass__product-image:focus-visible{outline:3px solid var(--brass);outline-offset:-5px;border-radius:10px 10px 0 0}
+.pass .pass__product-shop:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+@media(prefers-reduced-motion:no-preference){
+  .pass .pass__product-image img{transition:transform .35s var(--ease)}
+  .pass .pass__product-image:hover img{transform:scale(1.035)}
+}
+@media(max-width:1050px){
+  .pass .pass__products{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+  .pass .pass__product-copy{padding:18px}
+}
+@media(max-width:700px){
+  .pass .pass__catalog-head{align-items:start;flex-direction:column;gap:10px;margin-bottom:20px;padding-bottom:18px}
+  .pass .pass__count{text-align:left;font-size:.8rem;max-width:42ch}
+  .pass .pass__products{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .pass .pass__product{border-radius:9px}
+  .pass .pass__product-image{aspect-ratio:1/1}
+  .pass .pass__product-image img{padding:10px}
+  .pass .pass__product-copy{padding:13px}
+  .pass .pass__product-type{font-size:.59rem;letter-spacing:.1em;margin-bottom:8px}
+  .pass .pass__product h4{font-size:1.08rem;line-height:1.2;margin-bottom:10px}
+  .pass .pass__product-description{font-size:.79rem;line-height:1.5;margin-bottom:16px}
+  .pass .pass__product-shop{font-size:.63rem;letter-spacing:.08em;padding:11px 6px}
+}
+@media(prefers-reduced-motion:reduce){
+  .pass .pass__product-image img,.pass .pass__product-shop{transition:none;animation:none;transform:none}
+}

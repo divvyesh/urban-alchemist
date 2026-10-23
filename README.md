@@ -6,7 +6,7 @@ The landing page combines the original brand experience with all delivery additi
 
 ## Preserved website and delivery additions
 
-All 12 original sections remain: sunset hero/WebGL, storefront illustration, introduction, Worth the Walk band, seven illustrated Shumi shelves, jar wall, Snack Passport, 14-question original FAQ, six audience doors, discovery links, three-review carousel and full Visit/QR section. The original ticker, decorative effects, navigation, footer, shelf disclosures and review controls remain.
+All 12 original sections remain: sunset hero/WebGL, storefront illustration, introduction, Worth the Walk band, seven illustrated Shumi shelves, jar wall, Snack Passport, 14-question original FAQ, six audience doors, discovery links, three-review carousel and full Visit/QR section. The original ticker, decorative effects, navigation, footer, shelf disclosures and review controls remain. The Snack Passport now displays all 24 snack-collection product groups (22 foods/snacks and two drink groups), with merchant photos, catalog descriptions and direct product shopping links; flavor variants stay on Quickvee.
 
 Seven delivery sections remain: delivery hero, featured-product carousel, product descriptions/store-review feature, ordering steps, five delivery FAQs, local-store card and closing shopping CTA. The duplicate compact feeling cards were removed; the illustrated Shumi shelves remain the single feeling menu. The announcement, benefits band and sticky mobile shopping action remain. Together the page has 19 sections and 19 FAQ questions. Original anchors keep their IDs; delivery modules use distinct IDs to prevent collisions.
 
@@ -38,6 +38,7 @@ Research and release evidence is retained outside the repository under `../outpu
 | --- | --- |
 | `index.html` | All original brand sections plus six product features, delivery instructions, review excerpt and shopping actions; feeling navigation uses the original Shumi menu. |
 | `delivery.css` | Scoped delivery layouts, product cards, mobile shopping bar and responsive styling. |
+| `passport.css` | Scoped 24-product Snack Passport grid and responsive product cards. |
 | `restore.css` | Integration of original sections with delivery modules, combined navigation, secondary delivery headline and mobile spacing. |
 | `delivery.js` | Native horizontal product carousel, 4.5-second advance, manual navigation and motion controls. |
 | `shop-catalog.js` | Ordinary product categories, exact destinations, photo metadata and source references. |

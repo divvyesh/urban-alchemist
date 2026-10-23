@@ -2,7 +2,7 @@
 
 Static storefront for Urban Alchemist, 2219 N Clybourn Ave, Unit A, Lincoln Park, Chicago.
 
-The landing page combines the original brand experience with all delivery additions. Original sections retain their order and visual styling; delivery modules use scoped wrappers. The educational journal and local guides keep their existing routes.
+The landing page combines the original brand experience with all delivery additions. The original opening sequence stays intact: sunset hero, ticker, storefront image and introduction. Delivery modules follow that opening and use scoped wrappers. The hero retains its original headline and imagery, with delivery and product-browsing actions alongside directions and phone. The storefront illustration below also includes a delivery action alongside its original directions and phone buttons. The educational journal and local guides keep their existing routes.
 
 ## Preserved website and delivery additions
 

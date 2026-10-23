@@ -84,3 +84,11 @@
 @media(prefers-reduced-motion:reduce){
   .heritage-page .delivery-addition .delivery-hero h2{animation:none;transition:none}
 }
+
+/* Add a browsing path without changing the familiar hero button group. */
+.heritage-page .hero__browse-cta{display:inline-flex;align-items:center;gap:14px;min-height:44px;margin-top:12px;font-size:.82rem;font-weight:500;color:var(--ivory);text-decoration:underline;text-underline-offset:5px}
+.heritage-page .hero__browse-cta:hover{color:var(--brass-lt)}
+@media(max-width:700px){
+  .heritage-page .hero__browse-cta{order:6;font-size:.72rem;align-self:flex-start;margin-top:7px}
+  .heritage-page .hero__shop-note{order:7}
+}

@@ -1,8 +1,8 @@
 /* The feeling shop shares the house's typography, palette and age gate. */
 .shop-page [hidden]{display:none!important}
 .shop-header{background:var(--paper)}
-.shop-home{display:inline-flex;align-items:center;gap:.65rem;font-size:.76rem;font-weight:600;letter-spacing:.08em;white-space:nowrap}
-.shop-home:hover{color:var(--brass)}
+.shop-home{display:inline-flex;align-items:center;gap:.65rem;min-height:44px;padding:11px 20px;border-radius:999px;background:var(--forest);color:var(--ivory);font-size:.72rem;font-weight:600;letter-spacing:.08em;white-space:nowrap}
+.shop-home:hover{background:#285b3e;color:var(--ivory)}
 .shop-main{padding-top:var(--hdr-h)}
 .shop-intro{padding:clamp(42px,6vw,82px) var(--pad) 0;background:linear-gradient(180deg,var(--paper),var(--ivory))}
 .shop-intro .eyebrow{margin-bottom:1.4rem}
@@ -24,6 +24,9 @@
 .shop-checked{margin:14px 0 30px;max-width:80ch;font-size:.83rem;line-height:1.65;color:var(--mute)}
 .shop-products{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
 .shop-product{display:flex;flex-direction:column;align-items:flex-start;min-width:0;padding:28px;background:var(--paper);border:1px solid var(--rule);border-radius:9px;box-shadow:0 14px 30px -30px var(--forest)}
+.shop-product__image-link{display:block;width:100%;aspect-ratio:1/1;margin-bottom:24px;padding:14px;border:1px solid var(--rule);border-radius:6px;background:#fff;overflow:hidden;transition:border-color .2s}
+.shop-product__image-link:hover{border-color:var(--brass)}
+.shop-product__image{display:block;width:100%;height:100%;object-fit:contain}
 .shop-product__number{font-size:.68rem;line-height:1;letter-spacing:.18em;color:var(--brass);margin-bottom:32px}
 .shop-product h3{font-size:clamp(1.35rem,2vw,1.7rem);line-height:1.2;overflow-wrap:anywhere}
 .shop-product__variant{margin:10px 0 0;font-size:.9rem;font-weight:500;color:var(--brass);line-height:1.5}

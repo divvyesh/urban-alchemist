@@ -50,7 +50,12 @@
       var el = document.querySelector(id);
       if (!el) return;
       e.preventDefault();
-      window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 76, behavior: reduce ? 'auto' : 'smooth' });
+      if (a.classList.contains('skip')) {
+        if (!el.hasAttribute('tabindex')) el.setAttribute('tabindex', '-1');
+        el.focus({ preventScroll: true });
+      }
+      var offset = hdr ? hdr.getBoundingClientRect().height + 16 : 76;
+      window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - offset, behavior: reduce ? 'auto' : 'smooth' });
     });
   });
 })();

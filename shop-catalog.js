@@ -1,7 +1,6 @@
 /* Ordinary merchandise checked against the public Quickvee catalog on 2026-10-22.
    Categories describe occasions, preferences and product formats, not guaranteed effects.
-   Every record has a primary category. Empty categories are not shown.
-   Prices, variants and checkout remain on Quickvee; no automatic cart mutation. */
+   Photos come from the merchant product listings; exact variants and checkout remain on Quickvee. */
 window.UA_SHOP_CATALOG = {
   "verifiedAt": "2026-10-22",
   "shelves": [
@@ -61,7 +60,10 @@ window.UA_SHOP_CATALOG = {
       "sources": [
         "https://shop.barebells.com/collections/original-protein-bars"
       ],
-      "primaryShelf": "stamina"
+      "primaryShelf": "stamina",
+      "image": "/assets/products/quickvee-13980739-20261022.jpeg",
+      "imageAlt": "Barebells 20g protein bar — store listing photo",
+      "imageSource": "https://quickvee-live.s3.us-east-1.amazonaws.com/upload/products/SYE2217487IL/1790009567_9d4fc4.jpeg"
     },
     {
       "id": "13945027",
@@ -75,7 +77,10 @@ window.UA_SHOP_CATALOG = {
       "sources": [
         "https://www.casali.world/de-at"
       ],
-      "primaryShelf": "sweet-tooth"
+      "primaryShelf": "sweet-tooth",
+      "image": "/assets/products/quickvee-13945027-20261022.jpeg",
+      "imageAlt": "Casali Schoko Mangos — store listing photo",
+      "imageSource": "https://quickvee-live.s3.us-east-1.amazonaws.com/upload/products/SYE2217487IL/1790009582_75aee6.jpeg"
     },
     {
       "id": "13945018",
@@ -89,7 +94,10 @@ window.UA_SHOP_CATALOG = {
       "sources": [
         "https://kitkat.nestle.jp/products"
       ],
-      "primaryShelf": "sweet-tooth"
+      "primaryShelf": "sweet-tooth",
+      "image": "/assets/products/quickvee-13945018-20261022.jpeg",
+      "imageAlt": "KitKat Exotics — store listing photo",
+      "imageSource": "https://quickvee-live.s3.us-east-1.amazonaws.com/upload/products/SYE2217487IL/1790009617_a9c5c2.jpeg"
     },
     {
       "id": "13945003",
@@ -103,7 +111,10 @@ window.UA_SHOP_CATALOG = {
       "sources": [
         "https://www.mondelezinternational.com/our-brands/milka/index.html"
       ],
-      "primaryShelf": "sweet-tooth"
+      "primaryShelf": "sweet-tooth",
+      "image": "/assets/products/quickvee-13945003-20261022.jpeg",
+      "imageAlt": "Milka — store listing photo",
+      "imageSource": "https://quickvee-live.s3.us-east-1.amazonaws.com/upload/products/SYE2217487IL/1790009641_53def4.jpeg"
     },
     {
       "id": "13944991",
@@ -117,7 +128,10 @@ window.UA_SHOP_CATALOG = {
       "sources": [
         "https://www.mondelezinternational.com/our-brands/oreo/"
       ],
-      "primaryShelf": "sweet-tooth"
+      "primaryShelf": "sweet-tooth",
+      "image": "/assets/products/quickvee-13944991-20261022.png",
+      "imageAlt": "Oreo Choco Roll — store listing photo",
+      "imageSource": "https://quickvee-live.s3.us-east-1.amazonaws.com/upload/products/SYE2217487IL/1792434364_ac309c.png"
     },
     {
       "id": "13944983",
@@ -131,7 +145,10 @@ window.UA_SHOP_CATALOG = {
       "sources": [
         "https://www.marschocolatedrinksandtreats.com/"
       ],
-      "primaryShelf": "sweet-tooth"
+      "primaryShelf": "sweet-tooth",
+      "image": "/assets/products/quickvee-13944983-20261022.jpeg",
+      "imageAlt": "Twix Secret Centre Biscuits — store listing photo",
+      "imageSource": "https://quickvee-live.s3.us-east-1.amazonaws.com/upload/products/SYE2217487IL/1790009710_5806e6.jpeg"
     },
     {
       "id": "13944975",
@@ -145,7 +162,10 @@ window.UA_SHOP_CATALOG = {
       "sources": [
         "https://www.glico.com/global/100th_history_contents/highlight/product/008.html"
       ],
-      "primaryShelf": "sweet-tooth"
+      "primaryShelf": "sweet-tooth",
+      "image": "/assets/products/quickvee-13944975-20261022.png",
+      "imageAlt": "Caplico Strawberry — store listing photo",
+      "imageSource": "https://quickvee-live.s3.us-east-1.amazonaws.com/upload/products/SYE2217487IL/1792434761_b0a5f0.png"
     },
     {
       "id": "13944967",
@@ -159,7 +179,10 @@ window.UA_SHOP_CATALOG = {
       "sources": [
         "https://moooshcandy.com/"
       ],
-      "primaryShelf": "sweet-tooth"
+      "primaryShelf": "sweet-tooth",
+      "image": "/assets/products/quickvee-13944967-20261022.png",
+      "imageAlt": "Mooosh — store listing photo",
+      "imageSource": "https://quickvee-live.s3.us-east-1.amazonaws.com/upload/products/SYE2217487IL/1792435029_fc4963.png"
     },
     {
       "id": "13944952",
@@ -173,7 +196,10 @@ window.UA_SHOP_CATALOG = {
       "sources": [
         "https://maruchan.com/products/instant-lunch"
       ],
-      "primaryShelf": "seasonal"
+      "primaryShelf": "seasonal",
+      "image": "/assets/products/quickvee-13944952-20261022.jpeg",
+      "imageAlt": "Maruchan Instant Lunch — store listing photo",
+      "imageSource": "https://quickvee-live.s3.us-east-1.amazonaws.com/upload/products/SYE2217487IL/1790009772_4a7d98.jpeg"
     },
     {
       "id": "13944944",
@@ -187,7 +213,10 @@ window.UA_SHOP_CATALOG = {
       "sources": [
         "https://samyangamerica.com/buldak/original"
       ],
-      "primaryShelf": "seasonal"
+      "primaryShelf": "seasonal",
+      "image": "/assets/products/quickvee-13944944-20261022.jpeg",
+      "imageAlt": "Buldak — store listing photo",
+      "imageSource": "https://quickvee-live.s3.us-east-1.amazonaws.com/upload/products/SYE2217487IL/1790009793_9d66e4.jpeg"
     },
     {
       "id": "13944933",
@@ -200,7 +229,10 @@ window.UA_SHOP_CATALOG = {
         "seasonal"
       ],
       "sources": [],
-      "primaryShelf": "stamina"
+      "primaryShelf": "stamina",
+      "image": "/assets/products/quickvee-13944933-20261022.png",
+      "imageAlt": "Volo + Vero High Protein Instant Ramen — store listing photo",
+      "imageSource": "https://quickvee-live.s3.us-east-1.amazonaws.com/upload/products/SYE2217487IL/1792435771_4c237d.png"
     },
     {
       "id": "13896023",
@@ -212,7 +244,10 @@ window.UA_SHOP_CATALOG = {
         "stamina"
       ],
       "sources": [],
-      "primaryShelf": "stamina"
+      "primaryShelf": "stamina",
+      "image": "/assets/products/quickvee-13896023-20261022.jpeg",
+      "imageAlt": "Protein Bars — store listing photo",
+      "imageSource": "https://quickvee-live.s3.us-east-1.amazonaws.com/upload/products/SYE2217487IL/1790009903_b846b3.jpeg"
     },
     {
       "id": "13847801",
@@ -226,7 +261,10 @@ window.UA_SHOP_CATALOG = {
       "sources": [
         "https://www.pocky.com/products/"
       ],
-      "primaryShelf": "sweet-tooth"
+      "primaryShelf": "sweet-tooth",
+      "image": "/assets/products/quickvee-13847801-20261022.png",
+      "imageAlt": "Pocky — store listing photo",
+      "imageSource": "https://quickvee-live.s3.us-east-1.amazonaws.com/upload/products/SYE2217487IL/1792436765_85adfe.png"
     },
     {
       "id": "13847798",
@@ -238,7 +276,10 @@ window.UA_SHOP_CATALOG = {
         "curious"
       ],
       "sources": [],
-      "primaryShelf": "curious"
+      "primaryShelf": "curious",
+      "image": "/assets/products/quickvee-13847798-20261022.jpeg",
+      "imageAlt": "Chips — store listing photo",
+      "imageSource": "https://quickvee-live.s3.us-east-1.amazonaws.com/upload/products/SYE2217487IL/1790010004_86f307.jpeg"
     },
     {
       "id": "13847751",
@@ -250,7 +291,10 @@ window.UA_SHOP_CATALOG = {
         "refresh"
       ],
       "sources": [],
-      "primaryShelf": "refresh"
+      "primaryShelf": "refresh",
+      "image": "/assets/products/quickvee-13847751-20261022.jpeg",
+      "imageAlt": "Gums — store listing photo",
+      "imageSource": "https://quickvee-live.s3.us-east-1.amazonaws.com/upload/products/SYE2217487IL/1790010041_c7953b.jpeg"
     },
     {
       "id": "13847743",
@@ -262,7 +306,10 @@ window.UA_SHOP_CATALOG = {
         "sweet-tooth"
       ],
       "sources": [],
-      "primaryShelf": "sweet-tooth"
+      "primaryShelf": "sweet-tooth",
+      "image": "/assets/products/quickvee-13847743-20261022.jpeg",
+      "imageAlt": "Honey Bear Lollipops — store listing photo",
+      "imageSource": "https://quickvee-live.s3.us-east-1.amazonaws.com/upload/products/SYE2217487IL/1790010054_f567cd.jpeg"
     },
     {
       "id": "13847738",
@@ -275,7 +322,10 @@ window.UA_SHOP_CATALOG = {
         "seasonal"
       ],
       "sources": [],
-      "primaryShelf": "sweet-tooth"
+      "primaryShelf": "sweet-tooth",
+      "image": "/assets/products/quickvee-13847738-20261022.jpeg",
+      "imageAlt": "Gummies Candy — store listing photo",
+      "imageSource": "https://quickvee-live.s3.us-east-1.amazonaws.com/upload/products/SYE2217487IL/1790010088_0c8c0f.jpeg"
     },
     {
       "id": "13847710",
@@ -287,7 +337,10 @@ window.UA_SHOP_CATALOG = {
         "refresh"
       ],
       "sources": [],
-      "primaryShelf": "refresh"
+      "primaryShelf": "refresh",
+      "image": "/assets/products/quickvee-13847710-20261022.jpeg",
+      "imageAlt": "Exotic Drinks Other — store listing photo",
+      "imageSource": "https://quickvee-live.s3.us-east-1.amazonaws.com/upload/products/SYE2217487IL/1790010153_618c99.jpeg"
     },
     {
       "id": "13847681",
@@ -301,7 +354,10 @@ window.UA_SHOP_CATALOG = {
       "sources": [
         "https://www.royal-family.com.tw/eng/products.php?func=p_list&pc_parent=19"
       ],
-      "primaryShelf": "sweet-tooth"
+      "primaryShelf": "sweet-tooth",
+      "image": "/assets/products/quickvee-13847681-20261022.jpeg",
+      "imageAlt": "Royal Family Mochi — store listing photo",
+      "imageSource": "https://quickvee-live.s3.us-east-1.amazonaws.com/upload/products/SYE2217487IL/1790010185_57c478.jpeg"
     },
     {
       "id": "13847673",
@@ -315,7 +371,10 @@ window.UA_SHOP_CATALOG = {
       "sources": [
         "https://www.skittles.com/"
       ],
-      "primaryShelf": "sweet-tooth"
+      "primaryShelf": "sweet-tooth",
+      "image": "/assets/products/quickvee-13847673-20261022.jpeg",
+      "imageAlt": "Exotic Skittles — store listing photo",
+      "imageSource": "https://quickvee-live.s3.us-east-1.amazonaws.com/upload/products/SYE2217487IL/1790010226_098083.jpeg"
     },
     {
       "id": "13847664",
@@ -327,7 +386,10 @@ window.UA_SHOP_CATALOG = {
         "refresh"
       ],
       "sources": [],
-      "primaryShelf": "refresh"
+      "primaryShelf": "refresh",
+      "image": "/assets/products/quickvee-13847664-20261022.jpeg",
+      "imageAlt": "Exotics Drinks — store listing photo",
+      "imageSource": "https://quickvee-live.s3.us-east-1.amazonaws.com/upload/products/SYE2217487IL/1790010291_269fda.jpeg"
     },
     {
       "id": "13847606",
@@ -341,7 +403,10 @@ window.UA_SHOP_CATALOG = {
       "sources": [
         "https://www.calbee.co.jp/en/products/"
       ],
-      "primaryShelf": "curious"
+      "primaryShelf": "curious",
+      "image": "/assets/products/quickvee-13847606-20261022.jpeg",
+      "imageAlt": "Calbee — store listing photo",
+      "imageSource": "https://quickvee-live.s3.us-east-1.amazonaws.com/upload/products/SYE2217487IL/1790010323_2367c3.jpeg"
     },
     {
       "id": "13847600",
@@ -355,7 +420,10 @@ window.UA_SHOP_CATALOG = {
       "sources": [
         "https://www.doritos.com/search"
       ],
-      "primaryShelf": "curious"
+      "primaryShelf": "curious",
+      "image": "/assets/products/quickvee-13847600-20261022.png",
+      "imageAlt": "Doritos Exotics — store listing photo",
+      "imageSource": "https://quickvee-live.s3.us-east-1.amazonaws.com/upload/products/SYE2217487IL/1792441738_76a336.png"
     },
     {
       "id": "13847593",
@@ -369,7 +437,10 @@ window.UA_SHOP_CATALOG = {
       "sources": [
         "https://www.lays.com/"
       ],
-      "primaryShelf": "curious"
+      "primaryShelf": "curious",
+      "image": "/assets/products/quickvee-13847593-20261022.jpeg",
+      "imageAlt": "Lays Exotics — store listing photo",
+      "imageSource": "https://quickvee-live.s3.us-east-1.amazonaws.com/upload/products/SYE2217487IL/1790010411_0b4784.jpeg"
     },
     {
       "id": "13847710-matcha",

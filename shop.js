@@ -19,6 +19,11 @@
     return typeof value === 'string' && value.length <= 64 && /^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$/.test(value);
   }
 
+  function productImage(value) {
+    var path = text(value);
+    return path.length <= 256 && path.indexOf('/assets/products/') === 0 && /^\/assets\/products\/(?:[a-z0-9][a-z0-9_-]*\/)*[a-z0-9][a-z0-9_-]*\.(?:avif|gif|jpe?g|png|webp)$/i.test(path) ? path : '';
+  }
+
   function productDestination(value) {
     if (!text(value)) return null;
     try {
@@ -79,7 +84,7 @@
         assignments.forEach(function (id) { if (seen[key].shelves.indexOf(id) === -1) seen[key].shelves.push(id); });
         return;
       }
-      var clean = { name: name, variant: variant, summary: text(product.summary), href: destination.href, group: destination.group, parentListing: String(product.id) === destination.listedId, shelves: assignments };
+      var clean = { name: name, variant: variant, summary: text(product.summary), image: productImage(product.image), imageAlt: text(product.imageAlt), href: destination.href, group: destination.group, parentListing: String(product.id) === destination.listedId, shelves: assignments };
       seen[key] = clean;
       products.push(clean);
     });
@@ -144,6 +149,24 @@
 
   matches.forEach(function (product, index) {
     var card = element('article', 'shop-product');
+    var optionsLabel = 'View options for ' + product.name + (product.variant ? ', ' + product.variant : '') + ' on Quickvee (opens in a new tab)';
+    if (product.image) {
+      var imageLink = element('a', 'shop-product__image-link');
+      imageLink.href = product.href;
+      imageLink.target = '_blank';
+      imageLink.rel = 'noopener noreferrer';
+      imageLink.setAttribute('aria-label', optionsLabel);
+      var image = element('img', 'shop-product__image');
+      image.alt = product.imageAlt || product.name;
+      image.width = 600;
+      image.height = 600;
+      image.loading = 'lazy';
+      image.decoding = 'async';
+      image.addEventListener('error', function () { imageLink.remove(); });
+      image.src = product.image;
+      imageLink.appendChild(image);
+      card.appendChild(imageLink);
+    }
     var number = element('span', 'shop-product__number', String(index + 1).padStart(2, '0'));
     number.setAttribute('aria-hidden', 'true');
     card.appendChild(number);
@@ -154,7 +177,7 @@
     link.href = product.href;
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
-    link.setAttribute('aria-label', 'View options for ' + product.name + (product.variant ? ', ' + product.variant : '') + ' on Quickvee (opens in a new tab)');
+    link.setAttribute('aria-label', optionsLabel);
     var arrow = element('span', '', '↗');
     arrow.setAttribute('aria-hidden', 'true');
     link.appendChild(arrow);

@@ -1,13 +1,13 @@
 /* Ordinary merchandise checked against the public Quickvee catalog on 2026-10-22.
    Categories describe occasions, preferences and product formats, not guaranteed effects.
-   Photos come from the merchant product listings; exact variants and checkout remain on Quickvee. */
+   Photos come from merchant and manufacturer product listings; exact variants and checkout remain on Quickvee. */
 window.UA_SHOP_CATALOG = {
   "verifiedAt": "2026-10-22",
   "shelves": [
     {
       "id": "clarity",
       "title": "Clarity",
-      "description": "Coffee and tea drinks for a morning ritual. Explore by taste and format.",
+      "description": "Coffee, tea drinks and a functional mushroom gummy supplement for your routine. Explore by taste and format.",
       "emptyMessage": "No online picks are listed for this shelf yet. Explore another shelf or call the shop."
     },
     {
@@ -43,11 +43,64 @@ window.UA_SHOP_CATALOG = {
     {
       "id": "self-love",
       "title": "Self Love",
-      "description": "Dame personal-care devices, adult accessories and a dietary supplement. Review the exact item and package.",
+      "description": "Personal-care devices, adult accessories, a CBD topical and dietary supplements. Review the exact item and package.",
       "emptyMessage": "No online picks are listed for this shelf yet. Explore another shelf or call the shop."
     }
   ],
   "products": [
+    {
+      "id": "13847883",
+      "name": "Plant People WonderFocus mushroom gummies",
+      "variant": "Trial Size: WonderFocus Mushroom Gummies (10 ct)",
+      "summary": "A citrus-flavored gummy supplement with lion’s mane and cordyceps. Select the 10-count WonderFocus option on Quickvee and review its label.",
+      "href": "https://quickvee.com/product/SYE2217487IL?orderMethod=delivery&categoryid=106638&product=13847883",
+      "primaryShelf": "clarity",
+      "shelves": [
+        "clarity"
+      ],
+      "sources": [
+        "https://www.plantpeople.co/collections/try-for-9-95/products/wonder-focus-mushroom-gummies-5-day-trial"
+      ],
+      "image": "/assets/products/plant-people-wonderfocus-10ct-20261022.png",
+      "imageAlt": "Plant People WonderFocus 10-count citrus mushroom gummies — manufacturer photo",
+      "imageSource": "https://cdn.shopify.com/s/files/1/0369/0237/1373/files/WF_MINI_HAND.png?v=1696351567"
+    },
+    {
+      "id": "13895878",
+      "name": "PolkaDot Adaptogenic Seltzer",
+      "variant": "Strawberry Lemonade, Tropical Punch or Berry Blast",
+      "summary": "A PolkaDotFx sparkling beverage with named botanical and functional mushroom ingredients. Choose the flavor and review that can’s ingredients and directions.",
+      "href": "https://quickvee.com/product/SYE2217487IL?orderMethod=delivery&categoryid=106638&product=13895878",
+      "primaryShelf": "refresh",
+      "shelves": [
+        "refresh"
+      ],
+      "sources": [
+        "https://polkadotbrand.com/products/spark-seltzer-6-pack",
+        "https://polkadotbrand.com/products/polkadot-seltzer-connect",
+        "https://polkadotbrand.com/products/polkadot-seltzer-revive"
+      ],
+      "image": "/assets/products/quickvee-13895878-20261022.jpeg",
+      "imageAlt": "PolkaDotFx Spark Strawberry Lemonade functional mushroom seltzer — store listing photo",
+      "imageSource": "https://quickvee-live.s3.us-east-1.amazonaws.com/upload/products/SYE2217487IL/1790009481_f495f9.jpeg"
+    },
+    {
+      "id": "13952258",
+      "name": "JustCBD Cooling Gel 1500mg",
+      "variant": "Cooling Gel 1500mg",
+      "summary": "A hemp-derived CBD roll-on topical. Select Cooling Gel 1500mg on Quickvee. For external use; follow the selected package’s directions.",
+      "href": "https://quickvee.com/product/SYE2217487IL?orderMethod=delivery&categoryid=106642&product=13952258",
+      "primaryShelf": "self-love",
+      "shelves": [
+        "self-love"
+      ],
+      "sources": [
+        "https://justcbdstore.com/products/cbd-roll-on-freeze-cream"
+      ],
+      "image": "/assets/products/justcbd-cooling-gel-1500mg-20261022.jpg",
+      "imageAlt": "JustCBD Cooling Gel roll-on labeled 1500mg CBD — manufacturer photo",
+      "imageSource": "https://justcbdstore.com/cdn/shop/files/JustCBD_Topicals_Gel_Relief_RollOn_Cooling_1500mg-3.jpg?v=1752141700&width=1946"
+    },
     {
       "id": "13980739",
       "name": "Barebells 20g protein bar",
@@ -473,22 +526,6 @@ window.UA_SHOP_CATALOG = {
         "https://dame.com/products/tiny-wand-emojibator",
         "https://dame.com/products/dice",
         "https://dame.com/products/desire-gummies"
-      ]
-    },
-    {
-      "id": "13895878",
-      "name": "PolkaDot Adaptogenic Seltzer",
-      "variant": "Strawberry Lemonade, Tropical Punch or Berry Blast",
-      "summary": "A PolkaDotFx sparkling beverage with named botanical and functional mushroom ingredients. Choose the flavor and review that can’s ingredients and directions.",
-      "href": "https://quickvee.com/product/SYE2217487IL?orderMethod=delivery&categoryid=106638&product=13895878",
-      "primaryShelf": "refresh",
-      "shelves": [
-        "refresh"
-      ],
-      "sources": [
-        "https://polkadotbrand.com/products/spark-seltzer-6-pack",
-        "https://polkadotbrand.com/products/polkadot-seltzer-connect",
-        "https://polkadotbrand.com/products/polkadot-seltzer-revive"
       ]
     }
   ]

@@ -14,7 +14,7 @@ Existing copy that implied universal stock, batch testing, product legality, ope
 
 ## Shopping flow
 
-- Header, hero and closing delivery actions open the merchant’s ordinary Snacks collection on Quickvee with `orderMethod=delivery`.
+- Header, original hero and closing delivery actions open the merchant’s ordinary Snacks collection on Quickvee with `orderMethod=delivery`. The secondary delivery hero now features Plant People WonderFocus 10ct, PolkaDotFx Spark seltzer and JustCBD Cooling Gel 1500mg; its primary action opens the expanded product browser.
 - Every product photo and its adjacent action open the exact matching Quickvee product listing in a new tab.
 - Visitors choose the exact variant and quantity, then use Quickvee’s Add to cart. Address eligibility, stock, prices, ordering hours, fees, payment and fulfillment remain on Quickvee.
 - There is no automatic cart mutation, embedded checkout, fabricated cart permalink or unsupported variant-selection parameter.
@@ -22,9 +22,11 @@ Existing copy that implied universal stock, batch testing, product legality, ope
 
 ## Content and evidence
 
-The current catalog has 27 records representing 26 verified ordinary-merchandise product groups. Every record has a primary category. The seven populated categories are Clarity, Stamina, Seasonal, Curious, Sweet Tooth, Refresh and Self Love. The homepage presents six feeling cards; the Self Love card was removed at the owner’s request. The product browser retains all seven catalog categories and all product records. Navigation omits empty categories, and retired shelf queries fall back to a populated shelf.
+The current catalog has 29 records representing 28 verified ordinary-merchandise product groups. Every record has a primary category. The seven populated categories are Clarity, Stamina, Seasonal, Curious, Sweet Tooth, Refresh and Self Love. The homepage presents six feeling cards; the Self Love card was removed at the owner’s request. The product browser retains all seven catalog categories and all product records. Navigation omits empty categories, and retired shelf queries fall back to a populated shelf.
 
-The six featured products are Lay’s Exotics, Doritos Exotics, Exotics Drinks, Pocky, Barebells protein bars and Buldak. They are labeled **Featured picks**, without sales-ranking claims. Transcripts support leading with snacks, drinks, Lay’s and Doritos; no SKU sales history was supplied.
+The secondary hero features verified functional mushroom and CBD-topical variants, with a merchant seltzer photo and two manufacturer photos. The Quickvee listings and selectable variants were checked October 22. No effect or treatment claims are added, and no THC or psychedelic product is promoted.
+
+The six featured carousel products are Lay’s Exotics, Doritos Exotics, Exotics Drinks, Pocky, Barebells protein bars and Buldak. They are labeled **Featured picks**, without sales-ranking claims. Transcripts support leading with snacks, drinks, Lay’s and Doritos; no SKU sales history was supplied.
 
 Twenty-four merchant listing photos were captured from the public Quickvee Snacks collection on October 22, 2026. Local filenames include the exact parent product ID and date. They show representative options; visitors review the actual selected flavor, package and price on Quickvee. The matcha-specific card deliberately does not inherit a different drink’s parent photo. Missing or failed images preserve the text and shopping link.
 
@@ -45,7 +47,7 @@ Research and release evidence is retained outside the repository under `../outpu
 | `shop.html`, `shop.js`, `shop.css` | Product browser with linked photos, category counts, safe destinations and availability guidance. |
 | `app.js` | Age gate, progressive interactions and focus-aware anchor navigation. |
 | `styles.css`, `journal.css` | Shared brand styles and journal/local-guide layouts. |
-| `assets/products/` | Authentic, dated Quickvee merchant product photographs. |
+| `assets/products/` | Authentic, dated merchant and manufacturer product photographs. |
 | `blog/` | Existing educational articles. |
 
 ## Accessibility and fallback

@@ -1,6 +1,7 @@
 /* Integration only: original sections keep styles.css; delivery additions keep their wrappers. */
+.heritage-page #top{padding-top:calc(var(--hdr-h) + 55px)}
 .heritage-page .bundle-promo{padding:0;background:var(--deep)}
-.bundle-promo__link{display:block}
+.bundle-promo__link{display:block;width:50%;margin-inline:auto}
 .bundle-promo__link img{display:block;width:100%;height:auto}
 .bundle-promo__link:focus-visible{outline:4px solid var(--brass-lt);outline-offset:-4px}
 
@@ -68,6 +69,8 @@
   .heritage-page .delivery-addition .delivery-hero h2{font-size:68px}
 }
 @media(max-width:700px){
+  .heritage-page #top{padding-top:calc(var(--hdr-h) + 50px)}
+  .bundle-promo__link{width:100%}
   .heritage-page > .delivery-announcement{height:34px}
   .heritage-page > .hdr{top:34px}
   .heritage-page > .hdr.stuck{top:0}

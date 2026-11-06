@@ -1,4 +1,9 @@
 /* Integration only: original sections keep styles.css; delivery additions keep their wrappers. */
+.heritage-page .bundle-promo{padding:0;background:var(--deep)}
+.bundle-promo__link{display:block}
+.bundle-promo__link img{display:block;width:100%;height:auto}
+.bundle-promo__link:focus-visible{outline:4px solid var(--brass-lt);outline-offset:-4px}
+
 .heritage-page > .delivery-announcement{
   position:absolute;top:0;left:0;right:0;z-index:61;height:39px;
 }

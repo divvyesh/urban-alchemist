@@ -1,0 +1,17 @@
+# Urban Alchemist
+
+> Urban Alchemist is a 21+ neighborhood shop in Lincoln Park, Chicago, with imported snacks and drinks, teas, botanicals, and everyday wellness goods.
+
+- Address: 2219 N Clybourn Ave, Unit A, Chicago, IL 60614
+- Phone: +1 312-375-4448
+- Store hours (Chicago time): Monday–Thursday 10 a.m.–10 p.m.; Friday 10 a.m.–midnight; Saturday noon–midnight; Sunday 11 a.m.–9 p.m.
+- Online orders use Quickvee. Check Quickvee for delivery eligibility, ordering hours and product availability.
+
+## Main pages
+
+- [Home](https://www.ualincolnpark.com/): Store overview and frequently asked questions.
+- [Visit](https://www.ualincolnpark.com/visit): Hours, directions and visiting information.
+- [Shop](https://www.ualincolnpark.com/shop): Browse current online selections.
+- [Exotic snacks](https://www.ualincolnpark.com/exotic-snacks-lincoln-park): Guide to imported snacks and drinks.
+- [Teas and botanicals](https://www.ualincolnpark.com/wellness-apothecary-lincoln-park): Guide to the in-store tea, botanical and functional mushroom shelves.
+- [Journal](https://www.ualincolnpark.com/blog): Educational articles on ingredients, labels and evidence.

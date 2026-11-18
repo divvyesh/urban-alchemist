@@ -115,7 +115,7 @@
   navigation.replaceChildren();
   function addShelfLink(id, label, count) {
     var link = element('a', '', label);
-    link.href = '/shop.html?feeling=' + encodeURIComponent(id);
+    link.href = id === 'all' ? '/shop' : '/shop?feeling=' + encodeURIComponent(id);
     link.setAttribute('data-shelf', id);
     if (id === selected) link.setAttribute('aria-current', 'page');
     var countNode = element('span', 'shop-shelf-count', String(count));

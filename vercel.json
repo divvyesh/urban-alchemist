@@ -32,6 +32,11 @@
   ],
   "redirects": [
     {
+      "source": "/:legacyShop(shop[.]html)",
+      "destination": "/shop",
+      "statusCode": 301
+    },
+    {
       "source": "/blog/cbg-gummies-womens-health-menstrual-cycle",
       "destination": "/blog/cbg-basics",
       "permanent": true
